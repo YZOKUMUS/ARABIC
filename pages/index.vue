@@ -131,7 +131,7 @@ export default {
 
 .card p.arabic {
   margin: 0; /* Remove default margin */
-  font-size: 60px; /* Arabic font size */
+  font-size: 50px; /* Arabic font size */
   text-align: center; /* Center text */
   line-height: 1.2; /* Line height */
 }
