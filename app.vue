@@ -1,111 +1,118 @@
 <template>
-  <div class="card" v-if="currentCard" @click="flipCard">
-    <div :class="['card-inner', { flipped }]">
-      <div class="card-front">
-        <h2>{{ currentCard.arabic_word }}</h2>
-      </div>
-      <div class="card-back">
-        <h2>{{ currentCard.turkish_meaning }}</h2>
+  <div>
+    <h1>Upload Excel File</h1>
+    <input type="file" @change="handleFileUpload" accept=".xlsx, .xls" />
+    
+    <div v-if="wordCards.length">
+      <h2>Word Cards</h2>
+      <div class="card-container">
+        <div 
+          v-for="(card, index) in wordCards" 
+          :key="index" 
+          class="card"
+          @click="toggleCard(index)"
+          :style="getCardStyle(index)"
+        >
+          <p v-if="!card.flipped" class="arabic">{{ card.arabic }}</p>
+          <p v-else class="turkish">{{ card.turkish }}</p>
+        </div>
+
       </div>
     </div>
-  </div>
-  <div v-else>
-    <p>Loading...</p>
   </div>
 </template>
 
 <script>
-import * as XLSX from 'xlsx';
+import * as XLSX from "xlsx";
 
 export default {
   data() {
-    return {
-      flipped: false,
-      cards: [],
-      currentIndex: 0,
-    };
+    return { wordCards: [] };
   },
   async mounted() {
-    await this.loadExcelData();
+    const response = await fetch('./kelimeler.xlsx');
+    const arrayBuffer = await response.arrayBuffer();
+    this.loadExcel(new Uint8Array(arrayBuffer));
   },
   methods: {
-    async loadExcelData() {
-      try {
-        const response = await fetch('/kelimeler.xlsx');
-        const data = await response.arrayBuffer();
-        
-        // Parse the Excel file
-        const workbook = XLSX.read(data, { type: 'array' });
-        const worksheet = workbook.Sheets[workbook.SheetNames[0]];
+    async loadExcel(uintArr) {
+      const workbook = XLSX.read(uintArr, { type: "array" });
+      const worksheet = XLSX.utils.sheet_to_json(workbook.Sheets[workbook.SheetNames[0]], { header: 1 });
+      const [headers, ...rows] = worksheet;
+      const arabicIndex = headers.indexOf('arabic_word');
+      const turkishIndex = headers.indexOf('turkish_meaning');
 
-        // Convert the sheet to JSON
-        const jsonData = XLSX.utils.sheet_to_json(worksheet);
-
-        // Set the cards data
-        this.cards = jsonData.map(item => ({
-          arabic_word: item.arabic_word,
-          turkish_meaning: item.turkish_meaning
-        }));
-
-        // Optional: Set the initial currentIndex to 0 if there are cards
-        if (this.cards.length > 0) {
-          this.currentIndex = 0; // Ensure the currentIndex is valid
-        }
-      } catch (error) {
-        console.error("Error loading Excel data:", error);
+      this.wordCards = this.shuffleArray(rows.map(row => ({
+        arabic: row[arabicIndex],
+        turkish: row[turkishIndex],
+        flipped: false
+      })));
+    },
+    shuffleArray(array) {
+      for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+      }
+      return array;
+    },
+    handleFileUpload(event) {
+      const file = event.target.files[0];
+      if (file) {
+        const reader = new FileReader();
+        reader.onload = (e) => this.loadExcel(new Uint8Array(e.target.result));
+        reader.readAsArrayBuffer(file);
       }
     },
-    flipCard() {
-      this.flipped = !this.flipped;
+    toggleCard(index) {
+      this.wordCards[index].flipped = !this.wordCards[index].flipped;
     },
-  },
-  computed: {
-    currentCard() {
-      return this.cards[this.currentIndex]; // This might be undefined if cards array is empty
-    },
-  },
+    getCardStyle(index) {
+      const colors = ['#ffcccb', '#add8e6', '#90ee90', '#ffffe0', '#ffb6c1', '#d3d3d3'];
+      return {
+        backgroundColor: this.wordCards[index].flipped ? colors[index % colors.length] : colors[(index + 1) % colors.length],
+        boxShadow: '2px 2px 10px rgba(0, 0, 0, 0.3)',
+        transition: 'background-color 0.3s, box-shadow 0.3s'
+      };
+    }
+  }
 };
 </script>
 
 <style scoped>
-.card {
-  width: 200px;
-  height: 300px;
-  perspective: 1000px;
-  cursor: pointer;
-}
-
-.card-inner {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  transition: transform 0.6s;
-  transform-style: preserve-3d;
-}
-
-.card-inner.flipped {
-  transform: rotateY(180deg);
-}
-
-.card-front,
-.card-back {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  backface-visibility: hidden;
+.card-container {
   display: flex;
-  justify-content: center;
+  flex-wrap: wrap;
+  gap: 16px; /* Kartlar arasındaki boşluk */
+  justify-content: center; /* Kartları yatayda ortala */
+  padding: 20px; /* Opsiyonel: Konteyner etrafında boşluk */
+}
+
+.card {
+  width: 150px; /* Kart genişliği */
+  height: 120px; /* Kart yüksekliği */
+  border: 1px solid #000; /* Kart kenarlığı */
+  display: flex;
   align-items: center;
-  font-size: 24px;
+  justify-content: center;
+  cursor: pointer;
+  transition: transform 0.3s; /* Yumuşak geçiş */
 }
 
-.card-front {
-  background-color: #ffffff;
-  border: 1px solid #ccc;
+.card:hover {
+  transform: translateY(-3px); /* Üzerine gelince kaldırma etkisi */
 }
 
-.card-back {
-  background-color: #f1c40f;
-  transform: rotateY(180deg);
+.card p.arabic {
+  margin: 0; /* Varsayılan kenar boşluklarını kaldır */
+  font-size: 60px; /* Arapça yazı boyutu */
+  text-align: center; /* Metni ortala */
+  line-height: 1.2; /* Satır yüksekliği */
+}
+
+.card p.turkish {
+  margin: 0; /* Varsayılan kenar boşluklarını kaldır */
+  font-size: 18px; /* Türkçe yazı boyutu (daha küçük) */
+  text-align: center; /* Metni ortala */
+  line-height: 1.2; /* Satır yüksekliği */
 }
 </style>
