@@ -11,6 +11,7 @@
     "prettier": "prettier --write \"**/*.{js,vue,json,css,html}\""
   },
   "dependencies": {
+    "@mdi/font": "^7.4.47",
     "file-saver": "^2.0.5",
     "nuxt": "^3.13.2",
     "vue": "latest",
@@ -18,6 +19,8 @@
     "xlsx": "^0.18.5"
   },
   "devDependencies": {
-    "prettier": "^3.3.3"
+    "prettier": "^3.3.3",
+    "vite-plugin-vuetify": "^2.0.4",
+    "vuetify": "^3.7.3"
   }
 }
