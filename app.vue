@@ -2,13 +2,13 @@
   <div>
     <h1>Upload Excel File</h1>
     <input type="file" @change="handleFileUpload" accept=".xlsx, .xls" />
-    
+
     <div v-if="wordCards.length">
       <h2>Word Cards</h2>
       <div class="card-container">
-        <div 
-          v-for="(card, index) in wordCards" 
-          :key="index" 
+        <div
+          v-for="(card, index) in wordCards"
+          :key="index"
           class="card"
           @click="toggleCard(index)"
           :style="getCardStyle(index)"
@@ -16,14 +16,13 @@
           <p v-if="!card.flipped" class="arabic">{{ card.arabic }}</p>
           <p v-else class="turkish">{{ card.turkish }}</p>
         </div>
-
       </div>
     </div>
   </div>
 </template>
 
 <script>
-import * as XLSX from "xlsx";
+import * as XLSX from 'xlsx';
 
 export default {
   data() {
@@ -35,19 +34,32 @@ export default {
     this.loadExcel(new Uint8Array(arrayBuffer));
   },
   methods: {
-    async loadExcel(uintArr) {
-      const workbook = XLSX.read(uintArr, { type: "array" });
-      const worksheet = XLSX.utils.sheet_to_json(workbook.Sheets[workbook.SheetNames[0]], { header: 1 });
-      const [headers, ...rows] = worksheet;
+    loadExcel(uintArr) {
+      const data = uintArr;
+      const workbook = XLSX.read(data, { type: 'array' });
+      const firstSheetName = workbook.SheetNames[0];
+      const worksheet = XLSX.utils.sheet_to_json(workbook.Sheets[firstSheetName], { header: 1 });
+
+      const headers = worksheet[0];
       const arabicIndex = headers.indexOf('arabic_word');
       const turkishIndex = headers.indexOf('turkish_meaning');
 
-      this.wordCards = this.shuffleArray(rows.map(row => ({
-        arabic: row[arabicIndex],
-        turkish: row[turkishIndex],
-        flipped: false
-      })));
+      this.wordCards = this.shuffleArray(
+        worksheet.slice(1).map((row) => ({
+          arabic: row[arabicIndex],
+          turkish: row[turkishIndex],
+          flipped: false,
+        }))
+      );
     },
+
+    // Fonksiyon: Arapça kelimeyi sesli okuma
+    readAloud(text) {
+      const utterance = new SpeechSynthesisUtterance(text);
+      utterance.lang = 'ar'; // Arapça dil kodu
+      window.speechSynthesis.speak(utterance);
+    },
+
     shuffleArray(array) {
       for (let i = array.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));
@@ -55,26 +67,36 @@ export default {
       }
       return array;
     },
+
     handleFileUpload(event) {
       const file = event.target.files[0];
       if (file) {
         const reader = new FileReader();
-        reader.onload = (e) => this.loadExcel(new Uint8Array(e.target.result));
+        reader.onload = (e) => {
+          const data = new Uint8Array(e.target.result);
+          this.loadExcel(data);
+        };
         reader.readAsArrayBuffer(file);
       }
     },
+
     toggleCard(index) {
       this.wordCards[index].flipped = !this.wordCards[index].flipped;
+      if (this.wordCards[index].flipped) {
+        this.readAloud(this.wordCards[index].arabic); // Kart Arapçaya döndüğünde sesi oynat
+      }
     },
     getCardStyle(index) {
       const colors = ['#ffcccb', '#add8e6', '#90ee90', '#ffffe0', '#ffb6c1', '#d3d3d3'];
       return {
-        backgroundColor: this.wordCards[index].flipped ? colors[index % colors.length] : colors[(index + 1) % colors.length],
+        backgroundColor: this.wordCards[index].flipped
+          ? colors[index % colors.length]
+          : colors[(index + 1) % colors.length],
         boxShadow: '2px 2px 10px rgba(0, 0, 0, 0.3)',
-        transition: 'background-color 0.3s, box-shadow 0.3s'
+        transition: 'background-color 0.3s, box-shadow 0.3s',
       };
-    }
-  }
+    },
+  },
 };
 </script>
 
