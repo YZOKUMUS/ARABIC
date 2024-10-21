@@ -2,22 +2,18 @@
   <v-app>
     <v-navigation-drawer app v-model="drawer" permanent>
       <v-list>
-        <v-list-item
-          v-for="(item, index) in navItems"
-          :key="index"
-          @click="item.action"
-        >
+        <v-list-item v-for="(item, index) in navItems" :key="index" @click="item.action">
           <v-list-item-title>{{ item.title }}</v-list-item-title>
         </v-list-item>
       </v-list>
     </v-navigation-drawer>
 
     <v-app-bar app>
-      <v-toolbar-title>YZOKUMUS Arabic Word Cards</v-toolbar-title>
-      <v-spacer />
       <v-btn icon @click="toggleDrawer">
         <v-icon>mdi-menu</v-icon>
       </v-btn>
+      <v-toolbar-title>YZOKUMUS Arabic Word Cards</v-toolbar-title>
+      <v-spacer />
     </v-app-bar>
 
     <v-container>
@@ -45,7 +41,6 @@ export default {
       { title: '24 SIGA ÇEKİM', action: () => (window.location.href = '/ziya') },
       { title: '14 FİİL ÇEKİMİ', action: () => (window.location.href = '/contact') },
       { title: 'BOS SAYFA 2', action: () => (window.location.href = '/sayfa') },
-
     ]);
 
     return {
@@ -61,4 +56,4 @@ export default {
 .main-content {
   padding: 20px; /* Optional padding around the main content */
 }
-</style>  
+</style>
