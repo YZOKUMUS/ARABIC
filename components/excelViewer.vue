@@ -29,6 +29,10 @@ export default {
       type: ArrayBuffer,
       default: () => null,
     },
+    shuffle: {
+      type: Boolean,
+      default: () => true,
+    },
   },
   data() {
     return {
@@ -45,14 +49,22 @@ export default {
       const headers = worksheet[0];
       const arabicIndex = headers.indexOf('arabic_word');
       const turkishIndex = headers.indexOf('turkish_meaning');
-
-      this.wordCards = this.shuffleArray(
-        worksheet.slice(1).map((row) => ({
-          arabic: row[arabicIndex],
-          turkish: row[turkishIndex],
-          flipped: false,
-        }))
-      );
+      if (this.shuffle) {
+        this.wordCards = this.shuffleArray(
+          worksheet.slice(1).map((row) => ({
+            arabic: row[arabicIndex],
+            turkish: row[turkishIndex],
+            flipped: false,
+          }))
+        );
+      }
+      else{
+        this.wordCards = worksheet.slice(1).map((row) => ({
+            arabic: row[arabicIndex],
+            turkish: row[turkishIndex],
+            flipped: false,
+        }));
+      }
     },
     shuffleArray(array) {
       for (let i = array.length - 1; i > 0; i--) {
@@ -86,7 +98,7 @@ export default {
     readAloud(text) {
       // Cancel any ongoing speech before starting a new one
       window.speechSynthesis.cancel();
-      
+
       const utterance = new SpeechSynthesisUtterance(text);
       utterance.lang = 'ar';
       window.speechSynthesis.speak(utterance);
@@ -118,7 +130,6 @@ export default {
   },
 };
 </script>
-
 
 <style scoped>
 .card-container {
@@ -166,5 +177,4 @@ export default {
   text-wrap: wrap;
   max-width: 100%; /* Ensure the text doesn't exceed card width */
 }
-
 </style>
