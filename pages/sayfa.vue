@@ -97,7 +97,7 @@
       };
   
       onMounted(async () => {
-        const response = await fetch('./bossayfa.xlsx');
+        const response = await fetch('./bossayfa1.xlsx');
         const arrayBuffer = await response.arrayBuffer();
         loadExcel(new Uint8Array(arrayBuffer));
       });

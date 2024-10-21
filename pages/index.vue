@@ -97,7 +97,7 @@ export default {
     };
 
     onMounted(async () => {
-      const response = await fetch('./kelimeler.xlsx');
+      const response = await fetch('./arapcakelimeogrenme.xlsx');
       const arrayBuffer = await response.arrayBuffer();
       loadExcel(new Uint8Array(arrayBuffer));
     });

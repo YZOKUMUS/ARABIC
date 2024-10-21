@@ -97,7 +97,7 @@
       };
   
       onMounted(async () => {
-        const response = await fetch('./bossayfa.xlsx');
+        const response = await fetch('./13fiilcekimi.xlsx');
         const arrayBuffer = await response.arrayBuffer();
         loadExcel(new Uint8Array(arrayBuffer));
       });
@@ -131,7 +131,7 @@
   
   .card p.arabic {
     margin: 0; /* Remove default margin */
-    font-size: 40px; /* Arabic font size */
+    font-size: 30px; /* Arabic font size */
     text-align: center; /* Center text */
     line-height: 1.2; /* Line height */
   }
