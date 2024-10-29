@@ -2,7 +2,11 @@
   <v-app>
     <v-navigation-drawer app v-model="drawer" permanent>
       <v-list>
-        <v-list-item v-for="(item, index) in navItems" :key="index" @click="item.action">
+        <v-list-item
+          v-for="(item, index) in navItems"
+          :key="index"
+          :to="item.to"
+        >
           <v-list-item-title>{{ item.title }}</v-list-item-title>
         </v-list-item>
       </v-list>
@@ -12,7 +16,7 @@
       <v-btn icon @click="toggleDrawer">
         <v-icon>mdi-menu</v-icon>
       </v-btn>
-      <v-toolbar-title>YZOKUMUS Arabic Word Cards</v-toolbar-title>
+      <v-toolbar-title>ARAPÇA ÖĞRENİYORUM</v-toolbar-title>
       <v-spacer />
     </v-app-bar>
 
@@ -25,35 +29,29 @@
 </template>
 
 <script>
-import { ref } from 'vue';
-
 export default {
-  setup() {
-    const drawer = ref(false);
-
-    const toggleDrawer = () => {
-      drawer.value = !drawer.value;
-    };
-
-    const navItems = ref([
-      { title: 'ARAPÇA KELİME ÖĞRENME', action: () => (window.location.href = '/') },
-      { title: 'BOS SAYFA', action: () => (window.location.href = '/about') },
-      { title: '24 SIGA ÇEKİM', action: () => (window.location.href = '/ziya') },
-      { title: '14 FİİL ÇEKİMİ', action: () => (window.location.href = '/contact') },
-      { title: 'BOS SAYFA 2', action: () => (window.location.href = '/sayfa') },
-    ]);
-
+  data() {
     return {
-      drawer,
-      toggleDrawer,
-      navItems,
+      drawer: false,
+      navItems: [
+        { title: 'S.MÜCERRED FİİLLER', to: '/' },
+        { title: 'S.MEZİD FİİLLER', to: '/about' },
+        { title: 'EMSİLEİ MUHTELİFE', to: '/ziya' },
+        { title: '13 FİİL ÇEKİMİ', to: '/contact' },
+        { title: 'ESMAUL HUSNA', to: '/sayfa' },
+      ],
     };
+  },
+  methods: {
+    toggleDrawer() {
+      this.drawer = !this.drawer;
+    },
   },
 };
 </script>
 
 <style scoped>
 .main-content {
-  padding: 20px; /* Optional padding around the main content */
+  padding: 20px;
 }
 </style>

@@ -1,6 +1,6 @@
 <template>
   <div>
-    <excel-viewer :excelFile="uploadedFile" />
+    <excel-viewer :excelFile="uploadedFile" :shuffle="false" />
   </div>
 </template>
 

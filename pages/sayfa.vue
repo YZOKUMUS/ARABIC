@@ -16,7 +16,7 @@ export default {
   },
   methods: {
     async loadFile() {
-      const response = await fetch('./bossayfa1.xlsx');
+      const response = await fetch('./esmaulhusna.xlsx');
       const arrayBuffer = await response.arrayBuffer();
       this.uploadedFile = arrayBuffer; // ArrayBuffer olarak excelFile prop'una gönderiliyor
     },

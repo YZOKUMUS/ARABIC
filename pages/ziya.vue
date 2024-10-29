@@ -1,6 +1,6 @@
 <template>
   <div>
-    <excel-viewer :excelFile="uploadedFile" />
+    <excel-viewer :excelFile="uploadedFile" :shuffle="false"/>
   </div>
 </template>
 
@@ -16,7 +16,7 @@ export default {
   },
   methods: {
     async loadFile() {
-      const response = await fetch('./24sigacekimleri.xlsx');
+      const response = await fetch('./emsileimuhtelife.xlsx');
       const arrayBuffer = await response.arrayBuffer();
       this.uploadedFile = arrayBuffer; // ArrayBuffer olarak excelFile prop'una gönderiliyor
     },
