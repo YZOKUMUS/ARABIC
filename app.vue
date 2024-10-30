@@ -20,7 +20,7 @@
    <v-icon>mdi-menu</v-icon>
    </v-btn>
    <v-spacer />
-   <v-toolbar-title class="text-center" style="flex: 1; color: blue; font-size: 48px; line-height: 1.9;">
+   <v-toolbar-title class="text-center" style="flex: 1; color: blue; font-size: 26px; line-height: 1.9;">
    {{ currentTitle }}
   </v-toolbar-title>
    <v-spacer />
@@ -41,7 +41,7 @@
    data() {
    return {
    drawer: false,
-   currentTitle: 'م', // Varsayılan başlık
+   currentTitle: 'بِسْمِ اللهِ الرَّحْمٰنِ الرَّحِيمِ', // Varsayılan başlık
    navItems: [
    { title: 'S.MÜCERRED FİİLLER', to: '/' },
    { title: 'S.MEZİD FİİLLER', to: '/about' },
