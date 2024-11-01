@@ -8,11 +8,13 @@
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
-    "prettier": "prettier --write \"**/*.{js,vue,json,css,html}\""
+    "prettier": "prettier --write \"**/*.{js,vue,json,css,html}\"",
+    "deploy": "nuxt generate --dotenv .env.production && gh-pages --dotfiles -d .output/public"
   },
   "dependencies": {
     "@mdi/font": "^7.4.47",
     "file-saver": "^2.0.5",
+    "gh-pages": "^6.2.0",
     "nuxt": "^3.13.2",
     "vue": "latest",
     "vue-router": "latest",
