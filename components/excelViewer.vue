@@ -26,6 +26,7 @@
                         'red-card': isRed(card.arabic),
                         'green-card': isGreen(card.arabic),
                         'yellow-card': isYellow(card.arabic),
+                        'blue-card': isBlue(card.arabic),
                       },
                     ]"
                   >
@@ -53,7 +54,6 @@
 import * as XLSX from 'xlsx';
 
 export default {
-  // Script kısmı aynı kalıyor.
   props: {
     excelFile: {
       type: ArrayBuffer,
@@ -87,7 +87,10 @@ export default {
       try {
         const workbook = XLSX.read(uintArr, { type: 'array' });
         const firstSheetName = workbook.SheetNames[0];
-        const worksheet = XLSX.utils.sheet_to_json(workbook.Sheets[firstSheetName], { header: 1 });
+        const worksheet = XLSX.utils.sheet_to_json(
+          workbook.Sheets[firstSheetName],
+          { header: 1 }
+        );
 
         const headers = worksheet[0];
         const arabicIndex = headers.indexOf('arabic_word');
@@ -154,6 +157,10 @@ export default {
     isYellow(word) {
       return word.startsWith('اِ');
     },
+
+    isBlue(word) {
+      return word.startsWith('لَنْ');
+    },
   },
 };
 </script>
@@ -217,6 +224,10 @@ export default {
 
 .yellow-card {
   background-color: yellow !important;
+}
+
+.blue-card {
+  background-color: lightblue !important;
 }
 
 .flip-card-back {
