@@ -1,7 +1,8 @@
 <template>
   <div>
     <!-- Excel Viewer bileşeni için dosya yükleme -->
-    <excel-viewer :excelFile="uploadedFile" :shuffle="false" /> <!-- Yüklenen dosyayı gösteren bileşen -->
+    <excel-viewer :excelFile="uploadedFile" :shuffle="false" />
+    <!-- Yüklenen dosyayı gösteren bileşen -->
   </div>
 </template>
 

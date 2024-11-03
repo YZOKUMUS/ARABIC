@@ -1,7 +1,7 @@
 <template>
   <div>
     <!-- Excel Viewer bileşeni için yüklenen dosya -->
-    <excel-viewer :excelFile="uploadedFile" :shuffle= "false" />
+    <excel-viewer :excelFile="uploadedFile" :shuffle="false" />
   </div>
 </template>
 

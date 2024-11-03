@@ -12,7 +12,7 @@
         </v-list-item>
       </v-list>
     </v-navigation-drawer>
-    
+
     <v-app-bar app>
       <v-btn icon @click="toggleDrawer">
         <v-icon>mdi-menu</v-icon>
@@ -21,7 +21,7 @@
         {{ currentTitle }}
       </v-toolbar-title>
     </v-app-bar>
-    
+
     <v-container class="main-content mt-15">
       <NuxtPage />
     </v-container>

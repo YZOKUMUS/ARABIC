@@ -19,7 +19,16 @@
             >
               <div @click="toggleCard(index)" class="flip-card">
                 <div :class="['flip-card-inner', { flipped: card.flipped }]">
-                  <div :class="['flip-card-front', { 'red-card': isRed(card.arabic), 'green-card': isGreen(card.arabic), 'yellow-card': isYellow(card.arabic) }]">
+                  <div
+                    :class="[
+                      'flip-card-front',
+                      {
+                        'red-card': isRed(card.arabic),
+                        'green-card': isGreen(card.arabic),
+                        'yellow-card': isYellow(card.arabic),
+                      },
+                    ]"
+                  >
                     <p class="arabic">{{ card.arabic }}</p>
                   </div>
                   <div class="flip-card-back">
@@ -85,7 +94,7 @@ export default {
         const turkishIndex = headers.indexOf('turkish_meaning');
 
         if (arabicIndex === -1 || turkishIndex === -1) {
-          throw new Error("Gerekli sütunlar bulunamadı.");
+          throw new Error('Gerekli sütunlar bulunamadı.');
         }
 
         this.wordCards = worksheet.slice(1).map((row) => ({
@@ -98,7 +107,7 @@ export default {
           this.wordCards = this.shuffleArray(this.wordCards);
         }
       } catch (error) {
-        console.error("Excel yüklenirken hata oluştu:", error);
+        console.error('Excel yüklenirken hata oluştu:', error);
         this.resetCards();
       } finally {
         this.isLoading = false;
@@ -135,16 +144,16 @@ export default {
     },
 
     isRed(word) {
-      return word.startsWith("لَا");
+      return word.startsWith('لَا');
     },
 
     isGreen(word) {
-      return word.startsWith("لِ");
+      return word.startsWith('لِ');
     },
 
     isYellow(word) {
-      return word.startsWith("اِ");
-    }
+      return word.startsWith('اِ');
+    },
   },
 };
 </script>
