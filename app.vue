@@ -1,30 +1,27 @@
 <template>
   <v-app>
-    <!-- Yan Menü (Navigation Drawer) -->
     <v-navigation-drawer app v-model="drawer" permanent>
       <v-list>
         <v-list-item
           v-for="(item, index) in navItems"
           :key="index"
           :to="item.to"
-          @click="navigateTo(item.to, item.title)"
+          @click="navigateTo(item)"
         >
           <v-list-item-title>{{ item.title }}</v-list-item-title>
         </v-list-item>
       </v-list>
     </v-navigation-drawer>
     
-    <!-- Üst Menü (App Bar) -->
     <v-app-bar app>
       <v-btn icon @click="toggleDrawer">
         <v-icon>mdi-menu</v-icon>
       </v-btn>
-      <v-toolbar-title class="text-center" style="flex: 1; color: blue; font-size: 26px; line-height: 1.9;">
+      <v-toolbar-title class="text-center app-title">
         {{ currentTitle }}
       </v-toolbar-title>
     </v-app-bar>
     
-    <!-- İçerik Alanı -->
     <v-container class="main-content mt-15">
       <NuxtPage />
     </v-container>
@@ -36,7 +33,7 @@ export default {
   data() {
     return {
       drawer: false,
-      currentTitle: 'بِسْمِ اللهِ الرَّحْمٰنِ الرَّحِيمِ', // Varsayılan başlık
+      currentTitle: 'بِسْمِ اللهِ الرَّحْمٰنِ الرَّحِيمِ',
       navItems: [
         { title: 'S.MÜCERRED FİİLLER', to: '/' },
         { title: 'S.MEZİD FİİLLER', to: '/about' },
@@ -51,12 +48,12 @@ export default {
   },
   methods: {
     toggleDrawer() {
-      this.drawer = !this.drawer; // Yan menüyü aç/kapat
+      this.drawer = !this.drawer;
     },
-    navigateTo(route, title) {
-      this.$router.push(route); // Rotayı değiştir
-      this.drawer = false; // Yan menüyü kapatıyoruz
-      this.currentTitle = title; // Üst menü başlığını güncelliyoruz
+    navigateTo(item) {
+      this.$router.push(item.to);
+      this.drawer = false;
+      this.currentTitle = item.title;
     },
   },
 };
@@ -65,5 +62,16 @@ export default {
 <style scoped>
 .main-content {
   padding: 20px;
+}
+.app-title {
+  flex: 1;
+  color: blue;
+  font-size: 26px;
+  line-height: 1.9;
+}
+
+/* Yan menünün açılma ve kapanma hızını artırmak için geçiş süresi ayarı */
+.v-navigation-drawer {
+  transition-duration: 0.2s !important; /* Varsayılan süreyi azaltıyoruz */
 }
 </style>

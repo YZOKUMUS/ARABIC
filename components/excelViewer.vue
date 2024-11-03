@@ -1,24 +1,39 @@
 <template>
   <div>
+    <!-- Yükleniyor durumu -->
     <div v-if="isLoading">
       <p>Yükleniyor...</p>
     </div>
+
+    <!-- Yükleme tamamlandığında ve kartlar varsa -->
     <div v-else-if="wordCards.length">
       <v-row>
         <v-col>
           <v-row class="card-container" justify="center">
-            <v-col v-for="(card, index) in wordCards" :key="index" cols="12" md="auto" class="card-col">
-              <v-card @click="toggleCard(index)" :style="getCardStyle(index)" class="card">
-                <v-card-text>
-                  <p v-if="!card.flipped" class="arabic">{{ card.arabic }}</p>
-                  <p v-else class="turkish">{{ card.turkish }}</p>
-                </v-card-text>
-              </v-card>
+            <v-col
+              v-for="(card, index) in wordCards"
+              :key="index"
+              cols="12"
+              md="auto"
+              class="card-col"
+            >
+              <div @click="toggleCard(index)" class="flip-card">
+                <div :class="['flip-card-inner', { flipped: card.flipped }]">
+                  <div :class="['flip-card-front', { 'red-card': isRed(card.arabic), 'green-card': isGreen(card.arabic), 'yellow-card': isYellow(card.arabic) }]">
+                    <p class="arabic">{{ card.arabic }}</p>
+                  </div>
+                  <div class="flip-card-back">
+                    <p class="turkish">{{ card.turkish }}</p>
+                  </div>
+                </div>
+              </div>
             </v-col>
           </v-row>
         </v-col>
       </v-row>
     </div>
+
+    <!-- Kart yoksa veya yükleme hatası varsa -->
     <div v-else>
       <p>Kart bulunamadı veya dosya yüklenemedi.</p>
     </div>
@@ -29,6 +44,7 @@
 import * as XLSX from 'xlsx';
 
 export default {
+  // Script kısmı aynı kalıyor.
   props: {
     excelFile: {
       type: ArrayBuffer,
@@ -52,8 +68,7 @@ export default {
         if (newFile) {
           this.loadExcel(new Uint8Array(newFile));
         } else {
-          this.wordCards = [];
-          this.isLoading = false;
+          this.resetCards();
         }
       },
     },
@@ -64,7 +79,7 @@ export default {
         const workbook = XLSX.read(uintArr, { type: 'array' });
         const firstSheetName = workbook.SheetNames[0];
         const worksheet = XLSX.utils.sheet_to_json(workbook.Sheets[firstSheetName], { header: 1 });
-        
+
         const headers = worksheet[0];
         const arabicIndex = headers.indexOf('arabic_word');
         const turkishIndex = headers.indexOf('turkish_meaning');
@@ -84,16 +99,28 @@ export default {
         }
       } catch (error) {
         console.error("Excel yüklenirken hata oluştu:", error);
-        this.wordCards = [];
+        this.resetCards();
       } finally {
         this.isLoading = false;
       }
     },
+
     toggleCard(index) {
       if (index < this.wordCards.length) {
         this.wordCards[index].flipped = !this.wordCards[index].flipped;
+
+        if (this.wordCards[index].flipped) {
+          this.readWord(this.wordCards[index]);
+        }
       }
     },
+
+    readWord(card) {
+      const utterance = new SpeechSynthesisUtterance(card.arabic);
+      utterance.lang = 'ar-SA';
+      speechSynthesis.speak(utterance);
+    },
+
     shuffleArray(array) {
       for (let i = array.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));
@@ -101,16 +128,23 @@ export default {
       }
       return array;
     },
-    getCardStyle(index) {
-      const colors = ['#ffcccb', '#add8e6', '#90ee90', '#ffffe0', '#ffb6c1', '#d3d3d3'];
-      return {
-        backgroundColor: this.wordCards[index].flipped
-          ? colors[index % colors.length]
-          : colors[(index + 1) % colors.length],
-        boxShadow: '2px 2px 10px rgba(0, 0, 0, 0.3)',
-        transition: 'background-color 0.3s, box-shadow 0.3s',
-      };
+
+    resetCards() {
+      this.wordCards = [];
+      this.isLoading = false;
     },
+
+    isRed(word) {
+      return word.startsWith("لَا");
+    },
+
+    isGreen(word) {
+      return word.startsWith("لِ");
+    },
+
+    isYellow(word) {
+      return word.startsWith("اِ");
+    }
   },
 };
 </script>
@@ -128,36 +162,64 @@ export default {
   max-width: 150px;
 }
 
-.card {
+.flip-card {
+  perspective: 1000px; /* Kartın 3D dönüş efekti için perspektif */
   width: 100%;
   height: 120px;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.3s;
+  transform-style: preserve-3d;
+}
+
+.flip-card-inner.flipped {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: transform 0.3s;
+  font-size: 18px;
+  text-align: center;
+  line-height: 1.2;
 }
 
-.card:hover {
-  transform: translateY(-3px);
+.flip-card-front {
+  background-color: #ffcccb; /* Varsayılan arka plan rengi */
 }
 
-.card p.arabic {
-  margin: 0;
+.red-card {
+  background-color: red !important;
+}
+
+.green-card {
+  background-color: green !important;
+}
+
+.yellow-card {
+  background-color: yellow !important;
+}
+
+.flip-card-back {
+  background-color: #add8e6;
+  transform: rotateY(180deg);
+}
+
+.arabic {
   font-size: 30px;
-  text-align: center;
-  line-height: 1.2;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  max-width: 100%;
 }
 
-.card p.turkish {
-  margin: 0;
+.turkish {
   font-size: 16px;
-  text-align: center;
-  line-height: 1.2;
-  white-space: normal;
-  max-width: 100%;
 }
 </style>

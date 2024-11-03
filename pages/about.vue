@@ -1,7 +1,7 @@
 <template>
   <div>
     <!-- Excel Viewer bileşeni için dosya yükleme -->
-    <excel-viewer :excelFile="uploadedFile" :shuffle="false" />
+    <excel-viewer :excelFile="uploadedFile" :shuffle="false" /> <!-- Yüklenen dosyayı gösteren bileşen -->
   </div>
 </template>
 
@@ -14,7 +14,7 @@ export default {
   },
   mounted() {
     // Bileşen monte edildiğinde dosyayı yükle
-    this.loadFile();
+    this.loadFile(); // loadFile metodunu çağırarak dosyayı yüklemeye başla
   },
   methods: {
     /**
@@ -22,10 +22,12 @@ export default {
      */
     async loadFile() {
       try {
-        const response = await fetch('./mezidfiiller1.xlsx');
+        // Belirtilen dosyayı fetch ile yükle
+        const response = await fetch('./mezidfiiller.xlsx');
         if (!response.ok) {
           throw new Error('Dosya yüklenirken hata oluştu'); // Hata durumunu yakala
         }
+        // Yüklenen dosyayı ArrayBuffer formatında al
         const arrayBuffer = await response.arrayBuffer();
         this.uploadedFile = arrayBuffer; // ArrayBuffer olarak excelFile prop'una gönderiliyor
       } catch (error) {
@@ -35,5 +37,3 @@ export default {
   },
 };
 </script>
-
-

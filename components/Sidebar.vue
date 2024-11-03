@@ -2,7 +2,7 @@
   <div>
     <!-- Sidebar'ı açıp kapatmak için düğme -->
     <button class="toggle-btn" @click="toggleSidebar">
-      ☰
+      ☰ <!-- Menü simgesi -->
     </button>
 
     <!-- Sidebar Bileşeni -->
@@ -44,17 +44,16 @@ export default {
   background-color: #1a241c;
   color: white;
   padding: 16px;
-  transform: translateX(-100%); /* Başlangıçta kapalı */
-  transition: transform 0.3s ease;
+  transform: translateX(-100%);
+  transition: transform 0.2s ease; /* Geçiş süresi kısaltıldı */
   overflow-x: hidden;
   z-index: 5;
 }
 
 .sidebar.is-active {
-  transform: translateX(0); /* Açıkken görünür */
+  transform: translateX(0);
 }
 
-/* Sidebar içindeki liste stilleri */
 .sidebar ul {
   list-style: none;
   padding: 0;
@@ -65,18 +64,17 @@ export default {
   margin: 16px 0;
 }
 
-/* Sekme stilleri */
 .menu-item {
   color: white;
   text-decoration: none;
   font-size: 18px;
   padding: 8px;
   display: block;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.2s ease;
 }
 
 .menu-item:hover {
-  background-color: #5555557e;
+  background-color: #555555a9;
 }
 
 /* Toggle buton stilleri */
@@ -90,7 +88,7 @@ export default {
   padding: 8px 16px;
   cursor: pointer;
   z-index: 10;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.2s ease;
 }
 
 .toggle-btn:hover {
