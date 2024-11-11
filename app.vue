@@ -40,9 +40,11 @@ export default {
         { title: 'EMSİLEİ MUHTELİFE', to: '/ziya' },
         { title: '731 KELİME', to: '/contact' },
         { title: 'ESMAUL HUSNA', to: '/sayfa' },
-        { title: 'ARAPÇA EN TEMEL 250 FİİL', to: '/fiil250' },
+        { title: 'ARAPÇA EN TEMEL 360 FİİL', to: '/fiil250' },
         { title: 'AKSAM-I SEBA', to: '/aksamiseba' },
         { title: 'ARAPÇA BABLAR', to: '/arapcabablar' },
+        { title: 'KURAN TAMAMI', to: '/kuran' },
+        { title: 'GÜNLÜK ARAPÇA KELİMELER', to: '/gunluk' },
       ],
     };
   },

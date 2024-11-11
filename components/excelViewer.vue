@@ -20,14 +20,7 @@
               <div @click="toggleCard(index)" class="flip-card">
                 <div :class="['flip-card-inner', { flipped: card.flipped }]">
                   <div
-                    :class="[
-                      'flip-card-front',
-                      {
-                        'red-card': isRed(card.arabic),
-                        'green-card': isGreen(card.arabic),
-                        'yellow-card': isYellow(card.arabic),
-                      },
-                    ]"
+                    :class="[ 'flip-card-front', cardColor(card.arabic) ]"
                   >
                     <p class="arabic">{{ card.arabic }}</p>
                   </div>
@@ -53,7 +46,6 @@
 import * as XLSX from 'xlsx';
 
 export default {
-  // Script kısmı aynı kalıyor.
   props: {
     excelFile: {
       type: ArrayBuffer,
@@ -143,16 +135,11 @@ export default {
       this.isLoading = false;
     },
 
-    isRed(word) {
-      return word.startsWith('لَا');
-    },
-
-    isGreen(word) {
-      return word.startsWith('لِ');
-    },
-
-    isYellow(word) {
-      return word.startsWith('اِ');
+    cardColor(word) {
+      if (word.startsWith('لَا')) return 'red-card';
+      if (word.startsWith('لِ')) return 'green-card';
+      if (word.startsWith('اِ') || word.startsWith('اُ')) return 'yellow-card';
+      return '';
     },
   },
 };
@@ -172,7 +159,7 @@ export default {
 }
 
 .flip-card {
-  perspective: 1000px; /* Kartın 3D dönüş efekti için perspektif */
+  perspective: 1000px;
   width: 100%;
   height: 120px;
 }
@@ -204,19 +191,19 @@ export default {
 }
 
 .flip-card-front {
-  background-color: #ffcccb; /* Varsayılan arka plan rengi */
+  background-color: #ffcccb;
 }
 
 .red-card {
-  background-color: red !important;
+  background-color: red;
 }
 
 .green-card {
-  background-color: green !important;
+  background-color: green;
 }
 
 .yellow-card {
-  background-color: yellow !important;
+  background-color: yellow;
 }
 
 .flip-card-back {
