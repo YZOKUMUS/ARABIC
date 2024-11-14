@@ -23,6 +23,7 @@
                     :class="['flip-card-front', getCardClass(card.arabic)]"
                   >
                     <p class="arabic">{{ card.arabic }}</p>
+                    <p v-if="card.kelime_cinsi" class="kelime-cinsi-arabic">{{ card.kelime_cinsi }}</p>
                   </div>
                   <div class="flip-card-back">
                     <p class="turkish">{{ card.turkish }}</p>
@@ -62,7 +63,6 @@ export default {
       wordCards: [],
       isLoading: true,
       isReading: false,  // Okuma durumunu kontrol etmek için
-      isColorEnabled: false, // Renk sınıflarını kontrol etmek için
     };
   },
   watch: {
@@ -128,7 +128,7 @@ export default {
         // Kart tekrar 2 saniye sonra kapanacak
         setTimeout(() => {
           this.wordCards[index].flipped = false;
-        }, 2000);
+        }, 1000);
       }
     },
 
@@ -167,10 +167,6 @@ export default {
 
     // Kart rengi sınıfını döndüren fonksiyon
     getCardClass(word) {
-      if (!this.isColorEnabled) {
-        return ''; // Renk sınıfını pasif yapmak için boş string döndür
-      }
-
       // Başlangıç kelimeleri ve özel harfler için genişletilmiş koşullar
       if (
         word.startsWith('الْ') ||  // Elif Lam
@@ -192,10 +188,6 @@ export default {
 
       return '';  // Hiçbir renk uygulanmazsa
     },
-
-    toggleColorClass() {
-      this.isColorEnabled = !this.isColorEnabled; // Renk sınıfını aktif/pasif yapmak için
-    }
   },
 };
 </script>
@@ -271,11 +263,16 @@ export default {
   font-size: 16px;
 }
 
-.kelime-cinsi {
+.kelime-cinsi,
+.kelime-cinsi-arabic {
   position: absolute;
   top: 10px;
   right: 10px;
   font-size: 10px;
   color: #000;
+}
+
+.kelime-cinsi-arabic {
+  font-size: 6px; /* 6 punto */
 }
 </style>
