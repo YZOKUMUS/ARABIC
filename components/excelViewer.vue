@@ -26,6 +26,7 @@
                   </div>
                   <div class="flip-card-back">
                     <p class="turkish">{{ card.turkish }}</p>
+                    <p v-if="card.kelime_cinsi" class="kelime-cinsi">{{ card.kelime_cinsi }}</p>
                   </div>
                 </div>
               </div>
@@ -60,6 +61,7 @@ export default {
     return {
       wordCards: [],
       isLoading: true,
+      isReading: false,  // Okuma durumunu kontrol etmek için
     };
   },
   watch: {
@@ -84,16 +86,20 @@ export default {
         const headers = worksheet[0];
         const arabicIndex = headers.indexOf('arabic_word');
         const turkishIndex = headers.indexOf('turkish_meaning');
+        const kelimeCinsiIndex = headers.indexOf('kelime_cinsi'); // Kelime cinsi sütunu
 
         if (arabicIndex === -1 || turkishIndex === -1) {
           throw new Error('Gerekli sütunlar bulunamadı.');
         }
 
-        this.wordCards = worksheet.slice(1).map((row) => ({
-          arabic: row[arabicIndex] || '',
-          turkish: row[turkishIndex] || '',
-          flipped: false,
-        }));
+        this.wordCards = worksheet.slice(1).map((row) => {
+          return row ? {
+            arabic: row[arabicIndex] || '',
+            turkish: row[turkishIndex] || '',
+            kelime_cinsi: row[kelimeCinsiIndex] || '', // Kelime cinsini ekle
+            flipped: false,
+          } : null;
+        }).filter(Boolean); // Boş satırları filtrele
 
         if (this.shuffle) {
           this.wordCards = this.shuffleArray(this.wordCards);
@@ -107,9 +113,10 @@ export default {
     },
 
     toggleCard(index) {
-      if (index < this.wordCards.length) {
+      if (index < this.wordCards.length && !this.isReading) {
         this.wordCards[index].flipped = !this.wordCards[index].flipped;
 
+        // Okuma işlemini sadece kart açıldığında başlat
         if (this.wordCards[index].flipped) {
           this.readWord(this.wordCards[index]);
         }
@@ -117,9 +124,23 @@ export default {
     },
 
     readWord(card) {
+      this.isReading = true; // Okuma başlatıldığında 'isReading' durumu true olacak
+
       const utterance = new SpeechSynthesisUtterance(card.arabic);
       utterance.lang = 'ar-SA';
-      speechSynthesis.speak(utterance);
+
+      // Tarayıcıda konuşma sentezi desteği var mı kontrol et
+      if ('speechSynthesis' in window) {
+        speechSynthesis.speak(utterance);
+        
+        // Okuma tamamlandıktan sonra 'isReading' durumunu false yap
+        utterance.onend = () => {
+          this.isReading = false;
+        };
+      } else {
+        console.warn('Tarayıcınız konuşma sentezlemesini desteklemiyor.');
+        this.isReading = false;
+      }
     },
 
     shuffleArray(array) {
@@ -136,9 +157,21 @@ export default {
     },
 
     cardColor(word) {
-      if (word.startsWith('لَا')) return 'red-card';
-      if (word.startsWith('لِ')) return 'green-card';
-      if (word.startsWith('اِ') || word.startsWith('اُ')) return 'yellow-card';
+      // Kart renklerini kelimenin içeriğine göre belirleme
+      if (
+        word.startsWith('الْ') || 
+        word.startsWith('اَلْ') || 
+        word.startsWith('مِنْ') || 
+        word.startsWith('ال') || 
+        word.startsWith('بِ') || 
+        word.includes('ٌ') || 
+        word.includes('ً') || 
+        word.includes('ٍ') || 
+        word.includes('ة')
+      ) {
+        return 'gray-card';
+      }
+
       return '';
     },
   },
@@ -162,13 +195,14 @@ export default {
   perspective: 1000px;
   width: 100%;
   height: 120px;
+  cursor: pointer; /* Tıklandığında el şeklinde cursor */
 }
 
 .flip-card-inner {
   position: relative;
   width: 100%;
   height: 100%;
-  transition: transform 0.3s;
+  transition: transform 0.2s;
   transform-style: preserve-3d;
 }
 
@@ -194,16 +228,8 @@ export default {
   background-color: #ffcccb;
 }
 
-.red-card {
-  background-color: red;
-}
-
-.green-card {
-  background-color: green;
-}
-
-.yellow-card {
-  background-color: yellow;
+.gray-card {
+  background-color: gray;
 }
 
 .flip-card-back {
@@ -217,5 +243,13 @@ export default {
 
 .turkish {
   font-size: 16px;
+}
+
+.kelime-cinsi {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 10px;
+  color: #000;
 }
 </style>
