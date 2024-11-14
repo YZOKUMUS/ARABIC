@@ -1,10 +1,5 @@
 <template>
   <div>
-    <!-- Renk sınıfını aktif/pasif yapmak için buton -->
-    <v-btn @click="toggleColorClass">
-      Renk Sınıflarını {{ isColorEnabled ? 'Devre Dışı Bırak' : 'Aktif Et' }}
-    </v-btn>
-
     <!-- Yükleniyor durumu -->
     <div v-if="isLoading">
       <p>Yükleniyor...</p>
@@ -25,10 +20,7 @@
               <div @click="toggleCard(index)" class="flip-card">
                 <div :class="['flip-card-inner', { flipped: card.flipped }]">
                   <div
-                    :class="[
-                      'flip-card-front',
-                      getCardClass(card.arabic)
-                    ]"
+                    :class="['flip-card-front', getCardClass(card.arabic)]"
                   >
                     <p class="arabic">{{ card.arabic }}</p>
                   </div>
@@ -70,7 +62,7 @@ export default {
       wordCards: [],
       isLoading: true,
       isReading: false,  // Okuma durumunu kontrol etmek için
-      isColorEnabled: false,  // Başlangıçta renk sınıfları devre dışı
+      isColorEnabled: false, // Renk sınıflarını kontrol etmek için
     };
   },
   watch: {
@@ -132,8 +124,8 @@ export default {
         if (this.wordCards[index].flipped) {
           this.readWord(this.wordCards[index]);
         }
-
-        // Kartın 2 saniye sonra kapanması için setTimeout ekle
+        
+        // Kart tekrar 2 saniye sonra kapanacak
         setTimeout(() => {
           this.wordCards[index].flipped = false;
         }, 2000);
@@ -173,34 +165,37 @@ export default {
       this.isLoading = false;
     },
 
-    // Renk sınıfını döndüren fonksiyon
+    // Kart rengi sınıfını döndüren fonksiyon
     getCardClass(word) {
       if (!this.isColorEnabled) {
         return ''; // Renk sınıfını pasif yapmak için boş string döndür
       }
 
+      // Başlangıç kelimeleri ve özel harfler için genişletilmiş koşullar
       if (
-        word.startsWith('الْ') || 
-        word.startsWith('اَلْ') || 
-        word.startsWith('مِنْ') || 
-        word.startsWith('ال') || 
-        word.startsWith('بِ') || 
-        word.includes('ٌ') || 
-        word.includes('ً') || 
-        word.includes('ٍ') || 
-        word.includes('ة')
+        word.startsWith('الْ') ||  // Elif Lam
+        word.startsWith('اَلْ') ||  // Alif Lam
+        word.startsWith('مِنْ') ||  // Min
+        word.startsWith('ال') ||     // El
+        word.startsWith('بِ') ||     // Bi
+        word.includes('ٌ') ||       // Kasra, ً, ٍ gibi harfler
+        word.includes('ً') ||
+        word.includes('ٍ') ||
+        word.includes('ة') ||      // Çeşitli Arapça harfler
+        word.includes('َ') ||      // Fethayı da ekleyebiliriz
+        word.includes('ُ')
       ) {
-        return 'gray-card';
+        return 'gray-card';  // Açık yeşil renk sınıfı
       } else if (word.startsWith('لَنْ')) {
-        return 'blue-card';
+        return 'blue-card';  // Mavi renk
       }
-      return ''; // Hiçbir renk uygulanmazsa
+
+      return '';  // Hiçbir renk uygulanmazsa
     },
 
-    // Renk sınıfını aktif/pasif yapmak için fonksiyon
     toggleColorClass() {
-      this.isColorEnabled = !this.isColorEnabled;
-    },
+      this.isColorEnabled = !this.isColorEnabled; // Renk sınıfını aktif/pasif yapmak için
+    }
   },
 };
 </script>
@@ -256,7 +251,7 @@ export default {
 }
 
 .gray-card {
-  background-color: gray;
+  background-color: #90ee90; /* Açık yeşil */
 }
 
 .blue-card {
