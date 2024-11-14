@@ -19,9 +19,7 @@
             >
               <div @click="toggleCard(index)" class="flip-card">
                 <div :class="['flip-card-inner', { flipped: card.flipped }]">
-                  <div
-                    :class="[ 'flip-card-front', cardColor(card.arabic) ]"
-                  >
+                  <div :class="[ 'flip-card-front', getCardClass(card.arabic) ]">
                     <p class="arabic">{{ card.arabic }}</p>
                   </div>
                   <div class="flip-card-back">
@@ -42,6 +40,89 @@
     </div>
   </div>
 </template>
+
+<style scoped>
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: center;
+}
+
+.card-col {
+  flex: 0 1 150px;
+  max-width: 150px;
+}
+
+.flip-card {
+  perspective: 1000px;
+  width: 100%;
+  height: 120px;
+  cursor: pointer; /* Tıklandığında el şeklinde cursor */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.2s;
+  transform-style: preserve-3d;
+}
+
+.flip-card-inner.flipped {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  text-align: center;
+  line-height: 1.2;
+}
+
+.flip-card-front {
+  background-color: #ffcccb;
+}
+
+.gray-card {
+  background-color: gray;
+}
+
+.blue-card {
+  background-color: lightblue !important;
+}
+
+.flip-card-back {
+  background-color: #add8e6;
+  transform: rotateY(180deg);
+}
+
+.arabic {
+  font-size: 30px;
+}
+
+.turkish {
+  font-size: 16px;
+}
+
+.kelime-cinsi {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 10px;
+  color: #000;
+}
+</style>
 
 <script>
 import * as XLSX from 'xlsx';
@@ -114,32 +195,45 @@ export default {
 
     toggleCard(index) {
       if (index < this.wordCards.length && !this.isReading) {
-        this.wordCards[index].flipped = !this.wordCards[index].flipped;
+        const card = this.wordCards[index];
+        card.flipped = !card.flipped;
 
         // Okuma işlemini sadece kart açıldığında başlat
-        if (this.wordCards[index].flipped) {
-          this.readWord(this.wordCards[index]);
+        if (card.flipped) {
+          this.readWord(card);
+
+          // 2 saniye sonra kartı tekrar kapat
+          setTimeout(() => {
+            card.flipped = false;
+          }, 2000);
         }
       }
     },
 
     readWord(card) {
-      this.isReading = true; // Okuma başlatıldığında 'isReading' durumu true olacak
+      if (!this.isReading) {
+        this.isReading = true; // Okuma başlatıldığında 'isReading' durumu true olacak
 
-      const utterance = new SpeechSynthesisUtterance(card.arabic);
-      utterance.lang = 'ar-SA';
+        const utterance = new SpeechSynthesisUtterance(card.arabic);
+        utterance.lang = 'ar-SA';
 
-      // Tarayıcıda konuşma sentezi desteği var mı kontrol et
-      if ('speechSynthesis' in window) {
-        speechSynthesis.speak(utterance);
-        
-        // Okuma tamamlandıktan sonra 'isReading' durumunu false yap
-        utterance.onend = () => {
+        // Ses özelliklerini ayarlama
+        utterance.rate = 0.9;   // Hızı biraz yavaşlat
+        utterance.pitch = 1.2;  // Tonlamayı biraz artır
+        utterance.volume = 1;   // Ses seviyesini yüksek tut
+
+        // Tarayıcıda konuşma sentezi desteği var mı kontrol et
+        if ('speechSynthesis' in window) {
+          speechSynthesis.speak(utterance);
+          
+          // Okuma tamamlandıktan sonra 'isReading' durumunu false yap
+          utterance.onend = () => {
+            this.isReading = false;
+          };
+        } else {
+          console.warn('Tarayıcınız konuşma sentezlemesini desteklemiyor.');
           this.isReading = false;
-        };
-      } else {
-        console.warn('Tarayıcınız konuşma sentezlemesini desteklemiyor.');
-        this.isReading = false;
+        }
       }
     },
 
@@ -156,8 +250,8 @@ export default {
       this.isLoading = false;
     },
 
-    cardColor(word) {
-      // Kart renklerini kelimenin içeriğine göre belirleme
+    // Kart rengi sınıfını döndüren fonksiyon
+    getCardClass(word) {
       if (
         word.startsWith('الْ') || 
         word.startsWith('اَلْ') || 
@@ -170,86 +264,12 @@ export default {
         word.includes('ة')
       ) {
         return 'gray-card';
+      } else if (word.startsWith('لَنْ')) {
+        return 'blue-card';
       }
 
-      return '';
+      return ''; // Varsayılan durumda boş
     },
   },
 };
 </script>
-
-<style scoped>
-.card-container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 16px;
-  justify-content: center;
-}
-
-.card-col {
-  flex: 0 1 150px;
-  max-width: 150px;
-}
-
-.flip-card {
-  perspective: 1000px;
-  width: 100%;
-  height: 120px;
-  cursor: pointer; /* Tıklandığında el şeklinde cursor */
-}
-
-.flip-card-inner {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  transition: transform 0.2s;
-  transform-style: preserve-3d;
-}
-
-.flip-card-inner.flipped {
-  transform: rotateY(180deg);
-}
-
-.flip-card-front,
-.flip-card-back {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  backface-visibility: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 18px;
-  text-align: center;
-  line-height: 1.2;
-}
-
-.flip-card-front {
-  background-color: #ffcccb;
-}
-
-.gray-card {
-  background-color: gray;
-}
-
-.flip-card-back {
-  background-color: #add8e6;
-  transform: rotateY(180deg);
-}
-
-.arabic {
-  font-size: 30px;
-}
-
-.turkish {
-  font-size: 16px;
-}
-
-.kelime-cinsi {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  font-size: 10px;
-  color: #000;
-}
-</style>
