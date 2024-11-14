@@ -238,10 +238,7 @@ export default {
   line-height: 1.2;
 }
 
-.flip-card-front {
-  background-color: #ffcccb;
-}
-
+.flip-card-front,
 .gray-card {
   background-color: #90ee90; /* Açık yeşil */
 }
