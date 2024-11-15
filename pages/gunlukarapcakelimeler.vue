@@ -22,7 +22,7 @@
        */
       async loadFile() {
         try {
-          const response = await fetch('./gunluk.xlsx'); // Excel dosyasını yükle
+          const response = await fetch('./gunlukarapcakelimeler.xlsx'); // Excel dosyasını yükle
           if (!response.ok) {
             throw new Error('Dosya yüklenirken hata oluştu'); // Hata durumunu kontrol et
           }

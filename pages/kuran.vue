@@ -22,7 +22,7 @@ export default {
      */
     async loadFile() {
       try {
-        const response = await fetch('./quran.xlsx'); // Excel dosyasını yükle
+        const response = await fetch('./kuran.xlsx'); // Excel dosyasını yükle
         if (!response.ok) {
           throw new Error('Dosya yüklenirken hata oluştu'); // Hata durumunu kontrol et
         }
