@@ -22,7 +22,7 @@ export default {
      */
     async loadFile() {
       try {
-        const response = await fetch('./fiil360.xlsx'); // Excel dosyasını yükle
+        const response = await fetch('./fiil1790.xlsx'); // Excel dosyasını yükle
         if (!response.ok) {
           throw new Error('Dosya yüklenirken hata oluştu'); // Hata durumunu kontrol et
         }
