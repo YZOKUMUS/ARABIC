@@ -35,9 +35,9 @@ export default {
       drawer: false,
       currentTitle: 'بِسْمِ اللهِ الرَّحْمٰنِ الرَّحِيمِ',
       navItems: [
+        { title: 'EMSİLE-İ MUHTELİFE', to: '/ziya' },
         { title: 'S.MÜCERRED FİİLLER', to: '/' },
         { title: 'S.MEZİD FİİLLER', to: '/about' },
-        { title: 'EMSİLEİ MUHTELİFE', to: '/ziya' },
         { title: '731 KELİME', to: '/contact' },
         { title: 'ESMAUL HUSNA', to: '/sayfa' },
         { title: 'ARAPÇA EN TEMEL 1790 FİİL', to: '/fiil1790' },
