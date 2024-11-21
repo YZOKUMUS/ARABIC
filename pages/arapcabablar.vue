@@ -1,16 +1,17 @@
 <template>
-    <div>
-      <!-- Yüklenen PDF dosyasını göster -->
-      <object v-if="uploadedPdf" :data="uploadedPdf" type="application/pdf" class="pdf-fit">
-        <p>Bu tarayıcı PDF görüntülemeyi desteklemiyor. PDF dosyasını indirmek için 
-          <a :href="uploadedPdf" download>buraya tıklayın</a>.
-        </p>
-      </object>
-    </div>
-  </template>
-  
-  <script>
-  export default {
+  <div>
+    <!-- Yüklenen PDF dosyasını göster -->
+    <object v-if="uploadedPdf" :data="uploadedPdf" type="application/pdf" class="pdf-fit">
+      <p>
+        Bu tarayıcı PDF görüntülemeyi desteklemiyor. PDF dosyasını indirmek için
+        <a :href="uploadedPdf" download>buraya tıklayın</a>.
+      </p>
+    </object>
+  </div>
+</template>
+
+<script>
+export default {
   data() {
     return {
       uploadedPdf: null, // Yüklenen PDF'in URL'sini saklamak için değişken
@@ -39,13 +40,12 @@
   },
 };
 </script>
-  
-  <style scoped>
-  .pdf-fit {
-    width: 100%;
-    height: 100vh;
-    display: block;
-    margin: 0 auto;
-  }
-  </style>
-  
+
+<style scoped>
+.pdf-fit {
+  width: 100%;
+  height: 100vh;
+  display: block;
+  margin: 0 auto;
+}
+</style>

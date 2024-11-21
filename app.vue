@@ -12,7 +12,7 @@
         </v-list-item>
       </v-list>
     </v-navigation-drawer>
-    
+
     <v-app-bar app>
       <v-btn icon @click="toggleDrawer">
         <v-icon>mdi-menu</v-icon>
@@ -21,7 +21,7 @@
         {{ currentTitle }}
       </v-toolbar-title>
     </v-app-bar>
-    
+
     <v-container class="main-content mt-15">
       <NuxtPage />
     </v-container>
@@ -35,14 +35,18 @@ export default {
       drawer: false,
       currentTitle: 'بِسْمِ اللهِ الرَّحْمٰنِ الرَّحِيمِ',
       navItems: [
+        { title: 'EMSİLE-İ MUHTELİFE', to: '/ziya' },
         { title: 'S.MÜCERRED FİİLLER', to: '/' },
         { title: 'S.MEZİD FİİLLER', to: '/about' },
-        { title: 'EMSİLEİ MUHTELİFE', to: '/ziya' },
         { title: '731 KELİME', to: '/contact' },
         { title: 'ESMAUL HUSNA', to: '/sayfa' },
-        { title: 'ARAPÇA EN TEMEL 250 FİİL', to: '/fiil250' },
+        { title: 'ARAPÇA EN TEMEL 990 KELİME', to: '/kelime990' },
         { title: 'AKSAM-I SEBA', to: '/aksamiseba' },
+        { title: 'BAB ŞEMASI', to: '/bablar' },
         { title: 'ARAPÇA BABLAR', to: '/arapcabablar' },
+        { title: 'KURAN TAMAMI', to: '/kuran' },
+        { title: 'HARFİ CERLER', to: '/harficerler' },
+        { title: 'GÜNLÜK ARAPÇA KELİMELER', to: '/gunlukarapcakelimeler' },
       ],
     };
   },

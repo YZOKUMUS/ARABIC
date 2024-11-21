@@ -2,7 +2,8 @@
   <div>
     <!-- Sidebar'ı açıp kapatmak için düğme -->
     <button class="toggle-btn" @click="toggleSidebar">
-      ☰ <!-- Menü simgesi -->
+      ☰
+      <!-- Menü simgesi -->
     </button>
 
     <!-- Sidebar Bileşeni -->

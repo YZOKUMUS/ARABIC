@@ -19,11 +19,15 @@
             >
               <div @click="toggleCard(index)" class="flip-card">
                 <div :class="['flip-card-inner', { flipped: card.flipped }]">
-                  <div :class="['flip-card-front', { 'red-card': isRed(card.arabic), 'green-card': isGreen(card.arabic), 'yellow-card': isYellow(card.arabic) }]">
+                  <div
+                    :class="['flip-card-front', getCardClass(card.arabic)]"
+                  >
                     <p class="arabic">{{ card.arabic }}</p>
+                    <p v-if="card.kelime_cinsi" class="kelime-cinsi-arabic">{{ card.kelime_cinsi }}</p>
                   </div>
                   <div class="flip-card-back">
                     <p class="turkish">{{ card.turkish }}</p>
+                    <p v-if="card.kelime_cinsi" class="kelime-cinsi">{{ card.kelime_cinsi }}</p>
                   </div>
                 </div>
               </div>
@@ -44,7 +48,6 @@
 import * as XLSX from 'xlsx';
 
 export default {
-  // Script kısmı aynı kalıyor.
   props: {
     excelFile: {
       type: ArrayBuffer,
@@ -59,6 +62,7 @@ export default {
     return {
       wordCards: [],
       isLoading: true,
+      isReading: false,  // Okuma durumunu kontrol etmek için
     };
   },
   watch: {
@@ -78,27 +82,34 @@ export default {
       try {
         const workbook = XLSX.read(uintArr, { type: 'array' });
         const firstSheetName = workbook.SheetNames[0];
-        const worksheet = XLSX.utils.sheet_to_json(workbook.Sheets[firstSheetName], { header: 1 });
+        const worksheet = XLSX.utils.sheet_to_json(
+          workbook.Sheets[firstSheetName],
+          { header: 1 }
+        );
 
         const headers = worksheet[0];
         const arabicIndex = headers.indexOf('arabic_word');
         const turkishIndex = headers.indexOf('turkish_meaning');
+        const kelimeCinsiIndex = headers.indexOf('kelime_cinsi'); // Kelime cinsi sütunu
 
         if (arabicIndex === -1 || turkishIndex === -1) {
-          throw new Error("Gerekli sütunlar bulunamadı.");
+          throw new Error('Gerekli sütunlar bulunamadı.');
         }
 
-        this.wordCards = worksheet.slice(1).map((row) => ({
-          arabic: row[arabicIndex] || '',
-          turkish: row[turkishIndex] || '',
-          flipped: false,
-        }));
+        this.wordCards = worksheet.slice(1).map((row) => {
+          return row ? {
+            arabic: row[arabicIndex] || '',
+            turkish: row[turkishIndex] || '',
+            kelime_cinsi: row[kelimeCinsiIndex] || '', // Kelime cinsini ekle
+            flipped: false,
+          } : null;
+        }).filter(Boolean); // Boş satırları filtrele
 
         if (this.shuffle) {
           this.wordCards = this.shuffleArray(this.wordCards);
         }
       } catch (error) {
-        console.error("Excel yüklenirken hata oluştu:", error);
+        console.error('Excel yüklenirken hata oluştu:', error);
         this.resetCards();
       } finally {
         this.isLoading = false;
@@ -106,19 +117,39 @@ export default {
     },
 
     toggleCard(index) {
-      if (index < this.wordCards.length) {
+      if (index < this.wordCards.length && !this.isReading) {
         this.wordCards[index].flipped = !this.wordCards[index].flipped;
 
+        // Okuma işlemini sadece kart açıldığında başlat
         if (this.wordCards[index].flipped) {
           this.readWord(this.wordCards[index]);
         }
+        
+        // Kart tekrar 2 saniye sonra kapanacak
+        setTimeout(() => {
+          this.wordCards[index].flipped = false;
+        }, 1000);
       }
     },
 
     readWord(card) {
+      this.isReading = true; // Okuma başlatıldığında 'isReading' durumu true olacak
+
       const utterance = new SpeechSynthesisUtterance(card.arabic);
       utterance.lang = 'ar-SA';
-      speechSynthesis.speak(utterance);
+
+      // Tarayıcıda konuşma sentezi desteği var mı kontrol et
+      if ('speechSynthesis' in window) {
+        speechSynthesis.speak(utterance);
+
+        // Okuma tamamlandıktan sonra 'isReading' durumunu false yap
+        utterance.onend = () => {
+          this.isReading = false;
+        };
+      } else {
+        console.warn('Tarayıcınız konuşma sentezlemesini desteklemiyor.');
+        this.isReading = false;
+      }
     },
 
     shuffleArray(array) {
@@ -134,17 +165,29 @@ export default {
       this.isLoading = false;
     },
 
-    isRed(word) {
-      return word.startsWith("لَا");
-    },
+    // Kart rengi sınıfını döndüren fonksiyon
+    getCardClass(word) {
+      // Başlangıç kelimeleri ve özel harfler için genişletilmiş koşullar
+      if (
+        word.startsWith('الْ') ||  // Elif Lam
+        word.startsWith('اَلْ') ||  // Alif Lam
+        word.startsWith('مِنْ') ||  // Min
+        word.startsWith('ال') ||     // El
+        word.startsWith('بِ') ||     // Bi
+        word.includes('ٌ') ||       // Kasra, ً, ٍ gibi harfler
+        word.includes('ً') ||
+        word.includes('ٍ') ||
+        word.includes('ة') ||      // Çeşitli Arapça harfler
+        word.includes('َ') ||      // Fethayı da ekleyebiliriz
+        word.includes('ُ')
+      ) {
+        return 'gray-card';  // Açık yeşil renk sınıfı
+      } else if (word.startsWith('لَنْ')) {
+        return 'blue-card';  // Mavi renk
+      }
 
-    isGreen(word) {
-      return word.startsWith("لِ");
+      return '';  // Hiçbir renk uygulanmazsa
     },
-
-    isYellow(word) {
-      return word.startsWith("اِ");
-    }
   },
 };
 </script>
@@ -163,16 +206,17 @@ export default {
 }
 
 .flip-card {
-  perspective: 1000px; /* Kartın 3D dönüş efekti için perspektif */
+  perspective: 1000px;
   width: 100%;
   height: 120px;
+  cursor: pointer; /* Tıklandığında el şeklinde cursor */
 }
 
 .flip-card-inner {
   position: relative;
   width: 100%;
   height: 100%;
-  transition: transform 0.3s;
+  transition: transform 0.2s;
   transform-style: preserve-3d;
 }
 
@@ -194,20 +238,13 @@ export default {
   line-height: 1.2;
 }
 
-.flip-card-front {
-  background-color: #ffcccb; /* Varsayılan arka plan rengi */
+.flip-card-front,
+.gray-card {
+  background-color: #90ee90; /* Açık yeşil */
 }
 
-.red-card {
-  background-color: red !important;
-}
-
-.green-card {
-  background-color: green !important;
-}
-
-.yellow-card {
-  background-color: yellow !important;
+.blue-card {
+  background-color: lightblue !important;
 }
 
 .flip-card-back {
@@ -221,5 +258,18 @@ export default {
 
 .turkish {
   font-size: 16px;
+}
+
+.kelime-cinsi,
+.kelime-cinsi-arabic {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 10px;
+  color: #000;
+}
+
+.kelime-cinsi-arabic {
+  font-size: 6px; /* 6 punto */
 }
 </style>
