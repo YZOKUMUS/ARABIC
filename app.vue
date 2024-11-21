@@ -40,7 +40,7 @@ export default {
         { title: 'S.MEZİD FİİLLER', to: '/about' },
         { title: '731 KELİME', to: '/contact' },
         { title: 'ESMAUL HUSNA', to: '/sayfa' },
-        { title: 'ARAPÇA EN TEMEL 1790 FİİL', to: '/fiil1790' },
+        { title: 'ARAPÇA EN TEMEL 990 KELİME', to: '/kelime990' },
         { title: 'AKSAM-I SEBA', to: '/aksamiseba' },
         { title: 'BAB ŞEMASI', to: '/bablar' },
         { title: 'ARAPÇA BABLAR', to: '/arapcabablar' },
