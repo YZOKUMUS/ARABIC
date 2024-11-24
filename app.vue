@@ -39,6 +39,7 @@ export default {
         { title: 'S.MÜCERRED FİİLLER', to: '/' },
         { title: 'S.MEZİD FİİLLER', to: '/about' },
         { title: '731 KELİME', to: '/contact' },
+        { title: 'ARAPÇA-TÜRKÇE ORTAK KELİMELER', to: '/ortakkelimeler' },
         { title: 'ESMAUL HUSNA', to: '/sayfa' },
         { title: 'ARAPÇA EN TEMEL 990 KELİME', to: '/kelime990' },
         { title: 'AKSAM-I SEBA', to: '/aksamiseba' },
