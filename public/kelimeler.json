@@ -1,0 +1,2298 @@
+{
+    "عَبَث": {
+        "turkish_meaning": "Boş, oyalanma",
+        "kelime_cinsi": "Abes"
+    },
+    "عَجَباً": {
+        "turkish_meaning": "Ne kadar da şaşırtıcı",
+        "kelime_cinsi": "Acaba"
+    },
+    "عَاجِل": {
+        "turkish_meaning": "Geçici, acil",
+        "kelime_cinsi": "Acil"
+    },
+    "آداب": {
+        "turkish_meaning": "Kibarlıklar, görgüler",
+        "kelime_cinsi": "Adab"
+    },
+    "عَضَلَة": {
+        "turkish_meaning": "Adale, kas",
+        "kelime_cinsi": "Adale"
+    },
+    "عَدَالَة": {
+        "turkish_meaning": "Eşit davranma, doğruluk",
+        "kelime_cinsi": "Adalet"
+    },
+    "عَدَد": {
+        "turkish_meaning": "Sayı, rakam",
+        "kelime_cinsi": "Adet"
+    },
+    "عَادة": {
+        "turkish_meaning": "Huy, alışkanlık, gelenek",
+        "kelime_cinsi": "Adet"
+    },
+    "عَادِي": {
+        "turkish_meaning": "Sıradan, olağan",
+        "kelime_cinsi": "Adi"
+    },
+    "عَادِل": {
+        "turkish_meaning": "Eşit davranan, hak gözeten",
+        "kelime_cinsi": "Adil"
+    },
+    "عَدلية": {
+        "turkish_meaning": "Adalet, hukuk",
+        "kelime_cinsi": "Adliye"
+    },
+    "عَافِيَة": {
+        "turkish_meaning": "Sıhhat, sağlık, zindelik",
+        "kelime_cinsi": "Afiyet"
+    },
+    "أَخْلَاق": {
+        "turkish_meaning": "Huylar, yapılar, mizaçlar",
+        "kelime_cinsi": "Ahlak"
+    },
+    "أَحْوَال": {
+        "turkish_meaning": "Haller, durumlar",
+        "kelime_cinsi": "Ahval"
+    },
+    "عَايِلَة": {
+        "turkish_meaning": "Aile",
+        "kelime_cinsi": "Aile"
+    },
+    "عَقل": {
+        "turkish_meaning": "Akıl, idrak",
+        "kelime_cinsi": "Akıl"
+    },
+    "عَاقِبَة": {
+        "turkish_meaning": "Son, sonuç, netice",
+        "kelime_cinsi": "Akıbet"
+    },
+    "عَقِيدَة": {
+        "turkish_meaning": "İnanç, ideoloji, öğreti",
+        "kelime_cinsi": "Akide"
+    },
+    "عَكس": {
+        "turkish_meaning": "Ters, zıt, yansıma",
+        "kelime_cinsi": "Akis"
+    },
+    "عَقْد": {
+        "turkish_meaning": "Anlaşma, sözleşme, şartname",
+        "kelime_cinsi": "Akit"
+    },
+    "أَقْرَان": {
+        "turkish_meaning": "Dostlar, denkler",
+        "kelime_cinsi": "Akran"
+    },
+    "عَقْرَب": {
+        "turkish_meaning": "Akrep, iğne, saç lülesi",
+        "kelime_cinsi": "Akrep"
+    },
+    "عَلاَقَة": {
+        "turkish_meaning": "Tutulma, bağlanma",
+        "kelime_cinsi": "Alaka"
+    },
+    "عَلَامَة": {
+        "turkish_meaning": "İşaret, amblem",
+        "kelime_cinsi": "Alamet"
+    },
+    "آلَة": {
+        "turkish_meaning": "Araç, aygıt, cihaz",
+        "kelime_cinsi": "Alet"
+    },
+    "عَمَلِيَّة": {
+        "turkish_meaning": "Görev, eylem, üretim",
+        "kelime_cinsi": "Ameliyat"
+    },
+    "عَامِل": {
+        "turkish_meaning": "İşçi, etken, yapan",
+        "kelime_cinsi": "Amil"
+    },
+    "آمِين": {
+        "turkish_meaning": "Öyle olsun, kabul olsun",
+        "kelime_cinsi": "Amin"
+    },
+    "آمِر": {
+        "turkish_meaning": "Emir veren",
+        "kelime_cinsi": "Amir"
+    },
+    "أمَّا": {
+        "turkish_meaning": "Fakat, bununla beraber",
+        "kelime_cinsi": "Amma"
+    },
+    "عَرَبَة": {
+        "turkish_meaning": "Hızlı akan, vagon",
+        "kelime_cinsi": "Araba"
+    },
+    "أَرَاضِي": {
+        "turkish_meaning": "Yerler",
+        "kelime_cinsi": "Arazi"
+    },
+    "عَرْض": {
+        "turkish_meaning": "Sunma, sergileme",
+        "kelime_cinsi": "Arz"
+    },
+    "عَصَبِي": {
+        "turkish_meaning": "Sinirli, sinirsel",
+        "kelime_cinsi": "Asabi"
+    },
+    "أَصَالَة": {
+        "turkish_meaning": "Soyluluk, orjinallik",
+        "kelime_cinsi": "Asalet"
+    },
+    "أَصْحَاب": {
+        "turkish_meaning": "Dostlar, taraftarlar",
+        "kelime_cinsi": "Ashab"
+    },
+    "أَصْل": {
+        "turkish_meaning": "Asıl, temel",
+        "kelime_cinsi": "Asıl"
+    },
+    "عَصْر": {
+        "turkish_meaning": "Çağ, devir, ikindi",
+        "kelime_cinsi": "Asır"
+    },
+    "عَاصِي": {
+        "turkish_meaning": "Direnen",
+        "kelime_cinsi": "Asi"
+    },
+    "أَصِيل": {
+        "turkish_meaning": "Özgün, sağlam, köklü",
+        "kelime_cinsi": "Asil"
+    },
+    "عَشْق": {
+        "turkish_meaning": "Aşk",
+        "kelime_cinsi": "Aşk"
+    },
+    "آيَة": {
+        "turkish_meaning": "İşaret",
+        "kelime_cinsi": "Ayet"
+    },
+    "عَيْب": {
+        "turkish_meaning": "Kusur, hata, defo",
+        "kelime_cinsi": "Ayıp"
+    },
+    "عَذَاب": {
+        "turkish_meaning": "Acı, eziyet",
+        "kelime_cinsi": "Azap"
+    },
+    "عَزْم": {
+        "turkish_meaning": "Kararlılık, istek",
+        "kelime_cinsi": "Azim"
+    },
+    "عَزِيز": {
+        "turkish_meaning": "Saygın, soylu, nadir",
+        "kelime_cinsi": "Aziz"
+    },
+    "باقي": {
+        "turkish_meaning": "Kalan, devam eden",
+        "kelime_cinsi": "Baki"
+    },
+    "بَقَّال": {
+        "turkish_meaning": "Bakkal, manav",
+        "kelime_cinsi": "Bakkal"
+    },
+    "بَالِغ": {
+        "turkish_meaning": "Erişkin, önemli",
+        "kelime_cinsi": "Baliğ"
+    },
+    "بَارِز": {
+        "turkish_meaning": "Çıkıntılı, kabarık",
+        "kelime_cinsi": "Bariz"
+    },
+    "بَسِيط": {
+        "turkish_meaning": "Kolay, sade, önemsiz",
+        "kelime_cinsi": "Basit"
+    },
+    "بَاطِل": {
+        "turkish_meaning": "Asılsız, geçersiz",
+        "kelime_cinsi": "Batıl"
+    },
+    "بَلْدَة": {
+        "turkish_meaning": "Şehir, belde, ilçe",
+        "kelime_cinsi": "Belde"
+    },
+    "بَرَكَة": {
+        "turkish_meaning": "Birikme, bereket",
+        "kelime_cinsi": "Bereket"
+    },
+    "بَيَان": {
+        "turkish_meaning": "Açıklama, rapor",
+        "kelime_cinsi": "Beyan"
+    },
+    "بَزَاليا": {
+        "turkish_meaning": "Bezelye",
+        "kelime_cinsi": "Bezelye"
+    },
+    "بُخَار": {
+        "turkish_meaning": "Buhar, duman",
+        "kelime_cinsi": "Buhar"
+    },
+    "بُرْج": {
+        "turkish_meaning": "Kule, hisar, burç",
+        "kelime_cinsi": "Burç"
+    },
+    "جَاهِل": {
+        "turkish_meaning": "Cahil",
+        "kelime_cinsi": "Cahil"
+    },
+    "جَامِع": {
+        "turkish_meaning": "Toplayan",
+        "kelime_cinsi": "Cami"
+    },
+    "جَانِي": {
+        "turkish_meaning": "Suçlu",
+        "kelime_cinsi": "Cani"
+    },
+    "جَاسُوس": {
+        "turkish_meaning": "Casus",
+        "kelime_cinsi": "Casus"
+    },
+    "جَاذِب": {
+        "turkish_meaning": "Çekici, alımlı",
+        "kelime_cinsi": "Cazip"
+    },
+    "جَبْراً": {
+        "turkish_meaning": "Zorla, zor kullanarak",
+        "kelime_cinsi": "Cebren"
+    },
+    "جَهَنَّم": {
+        "turkish_meaning": "Cehennem, çukur",
+        "kelime_cinsi": "Cehennem"
+    },
+    "جَاكِيت": {
+        "turkish_meaning": "Ceket",
+        "kelime_cinsi": "Ceket"
+    },
+    "جَلَال": {
+        "turkish_meaning": "Ululuk, görkem",
+        "kelime_cinsi": "Celal"
+    },
+    "جَلاَّد": {
+        "turkish_meaning": "Deri tüccarı",
+        "kelime_cinsi": "Cellat"
+    },
+    "جَنَّة": {
+        "turkish_meaning": "Bahçe",
+        "kelime_cinsi": "Cennet"
+    },
+    "جَسَارَة": {
+        "turkish_meaning": "Arsızlık, cesaret",
+        "kelime_cinsi": "Cesaret"
+    },
+    "جَسَد": {
+        "turkish_meaning": "Beden, vücut",
+        "kelime_cinsi": "Ceset"
+    },
+    "جَسُور": {
+        "turkish_meaning": "Arsız, cesur",
+        "kelime_cinsi": "Cesur"
+    },
+    "جَوَاب": {
+        "turkish_meaning": "Cevap",
+        "kelime_cinsi": "Cevap"
+    },
+    "جِهَاد": {
+        "turkish_meaning": "Yoğun çaba",
+        "kelime_cinsi": "Cihat"
+    },
+    "جِهاز": {
+        "turkish_meaning": "Aygıt, mekanizma",
+        "kelime_cinsi": "Cihaz"
+    },
+    "جِلْد": {
+        "turkish_meaning": "Deri",
+        "kelime_cinsi": "Cilt"
+    },
+    "جِسْم": {
+        "turkish_meaning": "Madde, cisim, şekil",
+        "kelime_cinsi": "Cisim"
+    },
+    "جِوَار": {
+        "turkish_meaning": "Komşuluk, yakınlık",
+        "kelime_cinsi": "Civar"
+    },
+    "جُمْعَة": {
+        "turkish_meaning": "Cuma günü",
+        "kelime_cinsi": "Cuma"
+    },
+    "جُمْهُورِيَة": {
+        "turkish_meaning": "Topluluğa ait, cumhuriyet",
+        "kelime_cinsi": "Cumhuriyet"
+    },
+    "جُمْلَة": {
+        "turkish_meaning": "Bütün, cümle",
+        "kelime_cinsi": "Cümle"
+    },
+    "جُثَّة": {
+        "turkish_meaning": "Vücut, kadavra",
+        "kelime_cinsi": "Cüsse"
+    },
+    "جَنْطَة": {
+        "turkish_meaning": "Çanta",
+        "kelime_cinsi": "Çanta"
+    },
+    "جُورَب": {
+        "turkish_meaning": "Çorap",
+        "kelime_cinsi": "Çorap"
+    },
+    "دَاهِي": {
+        "turkish_meaning": "Kurnaz, akıllı",
+        "kelime_cinsi": "Dahi"
+    },
+    "داخل": {
+        "turkish_meaning": "Kapsamında, içinde",
+        "kelime_cinsi": "Dahil"
+    },
+    "دَقِيقة": {
+        "turkish_meaning": "Dakika, detay",
+        "kelime_cinsi": "Dakika"
+    },
+    "ضَرْبَة": {
+        "turkish_meaning": "Darbe, atış, vuruş",
+        "kelime_cinsi": "Darbe"
+    },
+    "دَفْتَر": {
+        "turkish_meaning": "Defter, ajanda, broşür",
+        "kelime_cinsi": "Defter"
+    },
+    "دَهْشَة": {
+        "turkish_meaning": "Şaşkınlık, hayrat",
+        "kelime_cinsi": "Dehşet"
+    },
+    "دَلِيل": {
+        "turkish_meaning": "Gösterge, kanıt",
+        "kelime_cinsi": "Delil"
+    },
+    "دَرَجَة": {
+        "turkish_meaning": "Basamak, oran, merdiven",
+        "kelime_cinsi": "Derece"
+    },
+    "دَرْس": {
+        "turkish_meaning": "Ders, bölüm, çalışma",
+        "kelime_cinsi": "Ders"
+    },
+    "دوا ء": {
+        "turkish_meaning": "İlaç",
+        "kelime_cinsi": "Deva"
+    },
+    "دَوَام": {
+        "turkish_meaning": "Devam, kararlılık, sebat",
+        "kelime_cinsi": "Devam"
+    },
+    "دَوْلَة": {
+        "turkish_meaning": "Devlet, memleket, eyalet",
+        "kelime_cinsi": "Devlet"
+    },
+    "دِيَار": {
+        "turkish_meaning": "Evler, bölgeler, yurtlar",
+        "kelime_cinsi": "Diyar"
+    },
+    "دُولاَب": {
+        "turkish_meaning": "Dolap, tekerlek",
+        "kelime_cinsi": "Dolap"
+    },
+    "دعا ء": {
+        "turkish_meaning": "Çağrı",
+        "kelime_cinsi": "Dua"
+    },
+    "دُكَّان": {
+        "turkish_meaning": "Dükkan",
+        "kelime_cinsi": "Dükkan"
+    },
+    "دُنْيَا": {
+        "turkish_meaning": "Daha alçak, daha önemsiz",
+        "kelime_cinsi": "Dünya"
+    },
+    "دَسْتُور": {
+        "turkish_meaning": "Anayasa, tüzük",
+        "kelime_cinsi": "Düstur"
+    },
+    "أَبَدِي": {
+        "turkish_meaning": "Sonsuz",
+        "kelime_cinsi": "Ebedi"
+    },
+    "أبَوين": {
+        "turkish_meaning": "Ebeveyn",
+        "kelime_cinsi": "Ebeveyn"
+    },
+    "أَبْلَه": {
+        "turkish_meaning": "Saf, beyinsiz",
+        "kelime_cinsi": "Ebleh"
+    },
+    "أَجْدَاد": {
+        "turkish_meaning": "Dedeler, atalar",
+        "kelime_cinsi": "Ecdat"
+    },
+    "أَجَل": {
+        "turkish_meaning": "Tayin edilmiş zaman, mühlet, kabul, evet",
+        "kelime_cinsi": "Ecel"
+    },
+    "أَفْضَل": {
+        "turkish_meaning": "Daha iyi",
+        "kelime_cinsi": "Efdal"
+    },
+    "أَفْكَار": {
+        "turkish_meaning": "Fikirler, düşünceler",
+        "kelime_cinsi": "Efkar"
+    },
+    "أَكْبَر": {
+        "turkish_meaning": "Daha büyük, en büyük",
+        "kelime_cinsi": "Ekber"
+    },
+    "أهل": {
+        "turkish_meaning": "…taraftarı, …e layık",
+        "kelime_cinsi": "Ehil"
+    },
+    "أَلَم": {
+        "turkish_meaning": "Acı, ağrı, sancı",
+        "kelime_cinsi": "Elem"
+    },
+    "أَلْوَدَاع": {
+        "turkish_meaning": "Uğurlar ola, selametle",
+        "kelime_cinsi": "Elveda"
+    },
+    "أَمَل": {
+        "turkish_meaning": "Umut",
+        "kelime_cinsi": "Emel"
+    },
+    "أمين": {
+        "turkish_meaning": "Güvenli, güvenilir",
+        "kelime_cinsi": "Emin"
+    },
+    "أَمْر": {
+        "turkish_meaning": "Güç, yetki, iş",
+        "kelime_cinsi": "Emir"
+    },
+    "أَنْفَس": {
+        "turkish_meaning": "Daha değerli, en değerli",
+        "kelime_cinsi": "Enfes"
+    },
+    "أَسَاس": {
+        "turkish_meaning": "Temel, baz, kaide",
+        "kelime_cinsi": "Esas"
+    },
+    "أَثَر": {
+        "turkish_meaning": "İz, yapıt",
+        "kelime_cinsi": "Eser"
+    },
+    "أَصْنَاف": {
+        "turkish_meaning": "Sınıflar, çeşitler",
+        "kelime_cinsi": "Esnaf"
+    },
+    "أَشْكَال": {
+        "turkish_meaning": "Şekiller, çeşitler",
+        "kelime_cinsi": "Eşkal"
+    },
+    "أشْيا": {
+        "turkish_meaning": "Şeyler",
+        "kelime_cinsi": "Eşya"
+    },
+    "أَوْهَام": {
+        "turkish_meaning": "Kuruntular, zanlar",
+        "kelime_cinsi": "Evham"
+    },
+    "أَوْرَاق": {
+        "turkish_meaning": "Yapraklar, kağıtlar",
+        "kelime_cinsi": "Evrak"
+    },
+    "أَوْصَاف": {
+        "turkish_meaning": "Nitelikler",
+        "kelime_cinsi": "Evsaf"
+    },
+    "أَوَّل": {
+        "turkish_meaning": "İlk, birinci",
+        "kelime_cinsi": "Evvel"
+    },
+    "آذان": {
+        "turkish_meaning": "Bildiri, duyuru",
+        "kelime_cinsi": "Ezan"
+    },
+    "أَزَلِي": {
+        "turkish_meaning": "Sonsuz",
+        "kelime_cinsi": "Ezeli"
+    },
+    "فَعَالِيَة": {
+        "turkish_meaning": "Etkinlik",
+        "kelime_cinsi": "Faaliyet"
+    },
+    "فَاجِعَة": {
+        "turkish_meaning": "Perişan eden, acı veren",
+        "kelime_cinsi": "Facia"
+    },
+    "فَاحِش": {
+        "turkish_meaning": "Aşırı, saçma",
+        "kelime_cinsi": "Fahiş"
+    },
+    "فَقِير": {
+        "turkish_meaning": "Yoksul",
+        "kelime_cinsi": "Fakir"
+    },
+    "فَرْق": {
+        "turkish_meaning": "Ayrım, fark",
+        "kelime_cinsi": "Fark"
+    },
+    "فَصِيح": {
+        "turkish_meaning": "Açık, anlaşılır",
+        "kelime_cinsi": "Fasih"
+    },
+    "فَاتِح": {
+        "turkish_meaning": "Açan, başlayan",
+        "kelime_cinsi": "Fatih"
+    },
+    "فَلْج": {
+        "turkish_meaning": "Felç",
+        "kelime_cinsi": "Felç"
+    },
+    "فَلَك": {
+        "turkish_meaning": "Yörünge",
+        "kelime_cinsi": "Felek"
+    },
+    "فَلْسَفَة": {
+        "turkish_meaning": "Felsefe",
+        "kelime_cinsi": "Felsefe"
+    },
+    "فَرَح": {
+        "turkish_meaning": "Neşe, mutluluk",
+        "kelime_cinsi": "Ferah"
+    },
+    "فِرَاسَة": {
+        "turkish_meaning": "Feraset",
+        "kelime_cinsi": "Firase"
+    },
+    "فَرْد": {
+        "turkish_meaning": "Birey, tek, yalnız",
+        "kelime_cinsi": "Fert"
+    },
+    "فَساد": {
+        "turkish_meaning": "Bozulma, çürüme",
+        "kelime_cinsi": "Fesat"
+    },
+    "فَوْقَ العَادَة": {
+        "turkish_meaning": "Olağanüstü",
+        "kelime_cinsi": "Fevkalade"
+    },
+    "فضا ء": {
+        "turkish_meaning": "Boşluk, uzay",
+        "kelime_cinsi": "Feza"
+    },
+    "فُرْصَة": {
+        "turkish_meaning": "İmkan",
+        "kelime_cinsi": "Fırsat"
+    },
+    "فِعْلاً": {
+        "turkish_meaning": "Hakikaten",
+        "kelime_cinsi": "Fiilen"
+    },
+    "فِكْر": {
+        "turkish_meaning": "Düşünce, görüş",
+        "kelime_cinsi": "Fikir"
+    },
+    "فِيل": {
+        "turkish_meaning": "Fil",
+        "kelime_cinsi": "Fil"
+    },
+    "فَيْلَسُوف": {
+        "turkish_meaning": "Filozof",
+        "kelime_cinsi": "Filozof"
+    },
+    "فِرَار": {
+        "turkish_meaning": "Kaçma",
+        "kelime_cinsi": "Firar"
+    },
+    "فِتْنَة": {
+        "turkish_meaning": "Sınav, çekicilik, hile",
+        "kelime_cinsi": "Fitne"
+    },
+    "غَا ئِب": {
+        "turkish_meaning": "Görünmeyen, gizli",
+        "kelime_cinsi": "Gaib"
+    },
+    "غَالِب": {
+        "turkish_meaning": "Çoğunluğu, kazanan",
+        "kelime_cinsi": "Galip"
+    },
+    "غَرَض": {
+        "turkish_meaning": "Hedef, amaç",
+        "kelime_cinsi": "Garaz"
+    },
+    "غَرِيب": {
+        "turkish_meaning": "Tuhaf, anlaşılması zor",
+        "kelime_cinsi": "Garip"
+    },
+    "غَايَة": {
+        "turkish_meaning": "Limit, varılacak yer",
+        "kelime_cinsi": "Gaye"
+    },
+    "غَضَب": {
+        "turkish_meaning": "Kızma, sinirlenme",
+        "kelime_cinsi": "Gazap"
+    },
+    "غِبْطَة": {
+        "turkish_meaning": "İmrenme",
+        "kelime_cinsi": "Gıpta"
+    },
+    "غُرُور": {
+        "turkish_meaning": "Kibir, aldatıcı",
+        "kelime_cinsi": "Gurur"
+    },
+    "خَبَر": {
+        "turkish_meaning": "Bilgi",
+        "kelime_cinsi": "Haber"
+    },
+    "حَج": {
+        "turkish_meaning": "Hac",
+        "kelime_cinsi": "Hac"
+    },
+    "حَاجَات": {
+        "turkish_meaning": "Gereksinim, zorunluluk",
+        "kelime_cinsi": "Hacet"
+    },
+    "حَجْم": {
+        "turkish_meaning": "Hacim",
+        "kelime_cinsi": "Hacim"
+    },
+    "حَدِيث": {
+        "turkish_meaning": "Konuşma, röportaj",
+        "kelime_cinsi": "Hadis"
+    },
+    "حَافِظ": {
+        "turkish_meaning": "Koruyucu",
+        "kelime_cinsi": "Hafız"
+    },
+    "حَافِظَة": {
+        "turkish_meaning": "Hafıza, koruyucu, bellek",
+        "kelime_cinsi": "Hafıza"
+    },
+    "خَا ئِن": {
+        "turkish_meaning": "İhanet eden, vefasız",
+        "kelime_cinsi": "Hain"
+    },
+    "حَق": {
+        "turkish_meaning": "Gerçek, doğruluk",
+        "kelime_cinsi": "Hak"
+    },
+    "حَقَارَة": {
+        "turkish_meaning": "Küçümseme, bayağılık",
+        "kelime_cinsi": "Hakaret"
+    },
+    "حَكَم": {
+        "turkish_meaning": "Hüküm veren, bilir kişi",
+        "kelime_cinsi": "Hakem"
+    },
+    "حَقِيقَة": {
+        "turkish_meaning": "Gerçek, hakikat",
+        "kelime_cinsi": "Hakikat"
+    },
+    "حَاكِم": {
+        "turkish_meaning": "Yönetici, hakim",
+        "kelime_cinsi": "Hakim"
+    },
+    "حَقِير": {
+        "turkish_meaning": "Düşük, adi, hor görülen",
+        "kelime_cinsi": "Hakir"
+    },
+    "حَال": {
+        "turkish_meaning": "Hal, işler, durum",
+        "kelime_cinsi": "Hal"
+    },
+    "خَلْوَة": {
+        "turkish_meaning": "Yalnızlık, kendini soyutlama",
+        "kelime_cinsi": "Halvet"
+    },
+    "حَرَكَة": {
+        "turkish_meaning": "Davranış, ayaklanma",
+        "kelime_cinsi": "Hareket"
+    },
+    "خَارِقُ العَادَة": {
+        "turkish_meaning": "Sıra dışı, olağan dışı",
+        "kelime_cinsi": "Harikulade"
+    },
+    "حَرِيص": {
+        "turkish_meaning": "Hırslı",
+        "kelime_cinsi": "Haris"
+    },
+    "خَرِيطَة": {
+        "turkish_meaning": "Harita",
+        "kelime_cinsi": "Harita"
+    },
+    "حَرْب": {
+        "turkish_meaning": "Savaş, dövüş",
+        "kelime_cinsi": "Harp"
+    },
+    "حَسَن": {
+        "turkish_meaning": "Güzel, iyi",
+        "kelime_cinsi": "Hasan"
+    },
+    "حَسَد": {
+        "turkish_meaning": "Kıskançlık, çekememe",
+        "kelime_cinsi": "Haset"
+    },
+    "خَصْم": {
+        "turkish_meaning": "Rakip, karşı taraf",
+        "kelime_cinsi": "Hasım"
+    },
+    "حَشَرَة": {
+        "turkish_meaning": "Böcek",
+        "kelime_cinsi": "Haşere"
+    },
+    "خَطأ": {
+        "turkish_meaning": "Hata, yanlış",
+        "kelime_cinsi": "Hata"
+    },
+    "خَطَ": {
+        "turkish_meaning": "Çizgi, el yazısı",
+        "kelime_cinsi": "Hat"
+    },
+    "خَطَّاط": {
+        "turkish_meaning": "El yazısı sanatçısı, hattat",
+        "kelime_cinsi": "Hattat"
+    },
+    "هوا ء": {
+        "turkish_meaning": "Hava, atmosfer",
+        "kelime_cinsi": "Hava"
+    },
+    "حَيَوَان": {
+        "turkish_meaning": "Diri olan, hayvan",
+        "kelime_cinsi": "Hayvan"
+    },
+    "هَضْم": {
+        "turkish_meaning": "Sindirim, katlanma",
+        "kelime_cinsi": "Hazım"
+    },
+    "خَزِينَة": {
+        "turkish_meaning": "Hazine",
+        "kelime_cinsi": "Hazine"
+    },
+    "هَدَف": {
+        "turkish_meaning": "Hedef, gaye, amaç",
+        "kelime_cinsi": "Hedef"
+    },
+    "هَدِيَّة": {
+        "turkish_meaning": "Hediye",
+        "kelime_cinsi": "Hediye"
+    },
+    "حِسَاب": {
+        "turkish_meaning": "Hesap, fatura",
+        "kelime_cinsi": "Hesap"
+    },
+    "هَيْبَة": {
+        "turkish_meaning": "Saygı ile karışık korku",
+        "kelime_cinsi": "Heybet"
+    },
+    "هَيْئَة": {
+        "turkish_meaning": "Kadro, grup, biçim",
+        "kelime_cinsi": "Heyet"
+    },
+    "هَيْكَل": {
+        "turkish_meaning": "Heykel, iskelet, biçim",
+        "kelime_cinsi": "Heykel"
+    },
+    "هِبَة": {
+        "turkish_meaning": "Hediye, hibe",
+        "kelime_cinsi": "Hibe"
+    },
+    "هِجْرَة": {
+        "turkish_meaning": "Ayrılma, göç",
+        "kelime_cinsi": "Hicret"
+    },
+    "حِكَايَة": {
+        "turkish_meaning": "Hikaye",
+        "kelime_cinsi": "Hikaye"
+    },
+    "هِلَال": {
+        "turkish_meaning": "Hilal",
+        "kelime_cinsi": "Hilal"
+    },
+    "حِس": {
+        "turkish_meaning": "Algı, duygu",
+        "kelime_cinsi": "His"
+    },
+    "خِدْمَة": {
+        "turkish_meaning": "Hizmet, görev, iş",
+        "kelime_cinsi": "Hizmet"
+    },
+    "حُقُوق": {
+        "turkish_meaning": "Gerçek, doğruluk",
+        "kelime_cinsi": "Hukuk"
+    },
+    "خُرَافَة": {
+        "turkish_meaning": "Boş inanç",
+        "kelime_cinsi": "Hurafe"
+    },
+    "حُضُور": {
+        "turkish_meaning": "Bulunma, var olma",
+        "kelime_cinsi": "Huzur"
+    },
+    "هُجُوم": {
+        "turkish_meaning": "Akın, saldırı",
+        "kelime_cinsi": "Hücum"
+    },
+    "حُكْم": {
+        "turkish_meaning": "Görüş, hüküm, karar",
+        "kelime_cinsi": "Hüküm"
+    },
+    "حُرِّيَّة": {
+        "turkish_meaning": "Özgürlük, serbestlik",
+        "kelime_cinsi": "Hürriyet"
+    },
+    "هُوِيَة": {
+        "turkish_meaning": "Kimlik, öz",
+        "kelime_cinsi": "Hüviyet"
+    },
+    "حُزْن": {
+        "turkish_meaning": "Üzüntü, hüzün",
+        "kelime_cinsi": "Hüzün"
+    },
+    "سَبَانَخ": {
+        "turkish_meaning": "Ispanak",
+        "kelime_cinsi": "Ispanak"
+    },
+    "اِصْرَار": {
+        "turkish_meaning": "Israr",
+        "kelime_cinsi": "Israr"
+    },
+    "عِبَادَة": {
+        "turkish_meaning": "Kulluk, tapınma",
+        "kelime_cinsi": "İbadet"
+    },
+    "عِبْرَة": {
+        "turkish_meaning": "İbret, öğüt, önem",
+        "kelime_cinsi": "İbret"
+    },
+    "اِدَّعَا ء": {
+        "turkish_meaning": "İddia, talep, sav",
+        "kelime_cinsi": "İddia"
+    },
+    "اِفَادَة": {
+        "turkish_meaning": "İfade etmek",
+        "kelime_cinsi": "İfade"
+    },
+    "عِفَّة": {
+        "turkish_meaning": "Kaçınma, namus",
+        "kelime_cinsi": "İffet"
+    },
+    "اِفْتِرَا ء": {
+        "turkish_meaning": "Uydurma, yalan",
+        "kelime_cinsi": "İftira"
+    },
+    "أِخْبَار": {
+        "turkish_meaning": "Bildirme",
+        "kelime_cinsi": "İhbar"
+    },
+    "اَخْتِلَاف": {
+        "turkish_meaning": "Çeşitlilik, değişim, anlaşmazlık",
+        "kelime_cinsi": "İhtilaf"
+    },
+    "اِحْتِمَال": {
+        "turkish_meaning": "Katlanma, olasılık",
+        "kelime_cinsi": "İhtimal"
+    },
+    "اِحْيَا ء": {
+        "turkish_meaning": "Canlandırma, düzenleme",
+        "kelime_cinsi": "İhya"
+    },
+    "اِقْنَاع": {
+        "turkish_meaning": "İkna, razı etme",
+        "kelime_cinsi": "İkna"
+    },
+    "اِقْرَار": {
+        "turkish_meaning": "Onama, kabul, itiraf",
+        "kelime_cinsi": "İkrar"
+    },
+    "عِلْم": {
+        "turkish_meaning": "Bilgi, ilim, öğrenme",
+        "kelime_cinsi": "İlim"
+    },
+    "اِيمَان": {
+        "turkish_meaning": "Bir şeyden emin olmak",
+        "kelime_cinsi": "İman"
+    },
+    "اِمْكَان": {
+        "turkish_meaning": "Yapabilirlik, kudret",
+        "kelime_cinsi": "İmkan"
+    },
+    "اِمْلَا ء": {
+        "turkish_meaning": "Doldurma, yazdırma, dikte",
+        "kelime_cinsi": "İmla"
+    },
+    "عِنَاد": {
+        "turkish_meaning": "İnat, direnç",
+        "kelime_cinsi": "İnat"
+    },
+    "اِنْفِعَال": {
+        "turkish_meaning": "Gerilim, tedirginlik",
+        "kelime_cinsi": "İnfial"
+    },
+    "اِنْكَار": {
+        "turkish_meaning": "Reddetme, yadırgama",
+        "kelime_cinsi": "İnkar"
+    },
+    "أن شا ءالله": {
+        "turkish_meaning": "Eğer Allah dilerse",
+        "kelime_cinsi": "İnşaAllah"
+    },
+    "اِنْتِحَار": {
+        "turkish_meaning": "İntihar etmek, batırılmak",
+        "kelime_cinsi": "İntihar"
+    },
+    "اِنْتِظَار": {
+        "turkish_meaning": "Bekleme, bekleyiş",
+        "kelime_cinsi": "İntizar"
+    },
+    "اِسْهَال": {
+        "turkish_meaning": "İshal",
+        "kelime_cinsi": "İshal"
+    },
+    "اِصْلَاح": {
+        "turkish_meaning": "Düzeltme, yenileme, tamir",
+        "kelime_cinsi": "Islah"
+    },
+    "اِسْتِغْفَار": {
+        "turkish_meaning": "Affını isteme, istiğfar",
+        "kelime_cinsi": "İstiğfar"
+    },
+    "اِسْتِحْقَاق": {
+        "turkish_meaning": "Hak ediş",
+        "kelime_cinsi": "İstihkak"
+    },
+    "اِسْتِقْلَال": {
+        "turkish_meaning": "Bağımsızlık",
+        "kelime_cinsi": "İstiklal"
+    },
+    "اِسْتِثْنَا ء": {
+        "turkish_meaning": "İstisna, hariç olma",
+        "kelime_cinsi": "İstisna"
+    },
+    "اِعْتِرَاف": {
+        "turkish_meaning": "İtiraf, kabullenme",
+        "kelime_cinsi": "İtiraf"
+    },
+    "اَتِّفَاق": {
+        "turkish_meaning": "Anlaşma, sözleşme",
+        "kelime_cinsi": "İttifak"
+    },
+    "قَبِيلَة": {
+        "turkish_meaning": "Oymak, aşiret",
+        "kelime_cinsi": "Kabile"
+    },
+    "قَابِلِيَّة": {
+        "turkish_meaning": "Yetenek",
+        "kelime_cinsi": "Kabiliyet"
+    },
+    "قَبْر": {
+        "turkish_meaning": "Mezar",
+        "kelime_cinsi": "Kabir"
+    },
+    "قَبُول": {
+        "turkish_meaning": "Onay, izin verme",
+        "kelime_cinsi": "Kabul"
+    },
+    "قَدَر": {
+        "turkish_meaning": "Alın yazısı, miktar",
+        "kelime_cinsi": "Kader"
+    },
+    "قَفَص": {
+        "turkish_meaning": "Kafes, sepet",
+        "kelime_cinsi": "Kafes"
+    },
+    "قَافِلَة": {
+        "turkish_meaning": "Kafile, kervan",
+        "kelime_cinsi": "Kafile"
+    },
+    "كَافِر": {
+        "turkish_meaning": "Örten, inançsız",
+        "kelime_cinsi": "Kafir"
+    },
+    "قَهْقَهَة": {
+        "turkish_meaning": "Kahkaha",
+        "kelime_cinsi": "Kahkaha"
+    },
+    "قَهْوَة": {
+        "turkish_meaning": "Kahve",
+        "kelime_cinsi": "Kahve"
+    },
+    "قَاعِدَة": {
+        "turkish_meaning": "Ayakta tutan, kural",
+        "kelime_cinsi": "Kaide"
+    },
+    "كَا ئِنَات": {
+        "turkish_meaning": "Var olanlar, varlıklar",
+        "kelime_cinsi": "Kainat"
+    },
+    "قَلَم": {
+        "turkish_meaning": "Kalem",
+        "kelime_cinsi": "Kalem"
+    },
+    "قَلْب": {
+        "turkish_meaning": "Kalp, merkez",
+        "kelime_cinsi": "Kalp"
+    },
+    "كَامِل": {
+        "turkish_meaning": "Tam, yetgin, olgun",
+        "kelime_cinsi": "Kamil"
+    },
+    "قَنَاعَة": {
+        "turkish_meaning": "Yetinme",
+        "kelime_cinsi": "Kanaat"
+    },
+    "قَانُون": {
+        "turkish_meaning": "Kanun, yasa, ilke",
+        "kelime_cinsi": "Kanun"
+    },
+    "قَرَار": {
+        "turkish_meaning": "Yerleşme, sabitlik",
+        "kelime_cinsi": "Karar"
+    },
+    "قَصَاب": {
+        "turkish_meaning": "Kasap",
+        "kelime_cinsi": "Kasap"
+    },
+    "قَصْد": {
+        "turkish_meaning": "Amaç, hedef",
+        "kelime_cinsi": "Kasıt"
+    },
+    "قَاتِل": {
+        "turkish_meaning": "Öldüren",
+        "kelime_cinsi": "Katil"
+    },
+    "كَفَالَة": {
+        "turkish_meaning": "Teminat, garanti",
+        "kelime_cinsi": "Kefalet"
+    },
+    "كَفِيل": {
+        "turkish_meaning": "Sorumlu, veli, garantör",
+        "kelime_cinsi": "Kefil"
+    },
+    "كَلِمَة": {
+        "turkish_meaning": "Kelime, söz",
+        "kelime_cinsi": "Kelime"
+    },
+    "قِبْلَة": {
+        "turkish_meaning": "Kıble",
+        "kelime_cinsi": "Kıble"
+    },
+    "قِرْطَاسِيَّة": {
+        "turkish_meaning": "Kırtasiye",
+        "kelime_cinsi": "Kırtasiye"
+    },
+    "قِسْماً": {
+        "turkish_meaning": "Bir bölümü",
+        "kelime_cinsi": "Kısmen"
+    },
+    "قِيْمَة": {
+        "turkish_meaning": "Değer, fiyat",
+        "kelime_cinsi": "Kıymet"
+    },
+    "كِبْر": {
+        "turkish_meaning": "Büyüklük",
+        "kelime_cinsi": "Kibir"
+    },
+    "كِبْرِيت": {
+        "turkish_meaning": "Kükürt, kibrit",
+        "kelime_cinsi": "Kibrit"
+    },
+    "كِتَاب": {
+        "turkish_meaning": "Kitap",
+        "kelime_cinsi": "Kitap"
+    },
+    "قُبَّة": {
+        "turkish_meaning": "Kubbe",
+        "kelime_cinsi": "Kubbe"
+    },
+    "قُدْرَة": {
+        "turkish_meaning": "Güç",
+        "kelime_cinsi": "Kudret"
+    },
+    "قُمَار": {
+        "turkish_meaning": "Kumar",
+        "kelime_cinsi": "Kumar"
+    },
+    "قُمَاش": {
+        "turkish_meaning": "Kumaş, çöp",
+        "kelime_cinsi": "Kumaş"
+    },
+    "قُرآن": {
+        "turkish_meaning": "Kur’an-ı Kerim",
+        "kelime_cinsi": "Kur’an-ı Kerim"
+    },
+    "قُرْبَان": {
+        "turkish_meaning": "Yaklaştıran, kurban",
+        "kelime_cinsi": "Kurban"
+    },
+    "قُصُور": {
+        "turkish_meaning": "Yetersizlik, eksiklik",
+        "kelime_cinsi": "Kusur"
+    },
+    "قُوَّة": {
+        "turkish_meaning": "Kuvvet, güç",
+        "kelime_cinsi": "Kuvvet"
+    },
+    "كُبْرَى": {
+        "turkish_meaning": "Daha büyük, en büyük",
+        "kelime_cinsi": "Kübra"
+    },
+    "كُفْر": {
+        "turkish_meaning": "Örtmek, küfür",
+        "kelime_cinsi": "Küfür"
+    },
+    "لَازِم": {
+        "turkish_meaning": "Ayrılmaz, zorunlu",
+        "kelime_cinsi": "Lazım"
+    },
+    "لَوْحَة": {
+        "turkish_meaning": "Plaka, tabaka",
+        "kelime_cinsi": "Levha"
+    },
+    "لَذَّة": {
+        "turkish_meaning": "Lezzet, tat",
+        "kelime_cinsi": "Lezzet"
+    },
+    "لَيْمُون": {
+        "turkish_meaning": "Limon",
+        "kelime_cinsi": "Limon"
+    },
+    "لِسَان": {
+        "turkish_meaning": "Dil",
+        "kelime_cinsi": "Lisan"
+    },
+    "لُقْمَة": {
+        "turkish_meaning": "Lokma",
+        "kelime_cinsi": "Lokma"
+    },
+    "لُزُوم": {
+        "turkish_meaning": "Zorunluluk, gereksiniz",
+        "kelime_cinsi": "Lüzum"
+    },
+    "مَعَ الأَسَف": {
+        "turkish_meaning": "Ne yazık",
+        "kelime_cinsi": "Maalesef"
+    },
+    "مَعْدَن": {
+        "turkish_meaning": "Kaynak, mineral, filiz",
+        "kelime_cinsi": "Maden"
+    },
+    "مَعْدِنِيّ": {
+        "turkish_meaning": "Maden ile ilgili",
+        "kelime_cinsi": "Madeni"
+    },
+    "مَغَارَة": {
+        "turkish_meaning": "Mağara",
+        "kelime_cinsi": "Mağara"
+    },
+    "مَغْدُور": {
+        "turkish_meaning": "Aykırı davranılan",
+        "kelime_cinsi": "Mağdur"
+    },
+    "مَغْلُوب": {
+        "turkish_meaning": "Yenik, yenilmiş",
+        "kelime_cinsi": "Mağlup"
+    },
+    "مَحَل": {
+        "turkish_meaning": "Yer, konum, sebep",
+        "kelime_cinsi": "Mahal"
+    },
+    "مَحَلَّة": {
+        "turkish_meaning": "Yer konum, mahalle",
+        "kelime_cinsi": "Mahalle"
+    },
+    "مَهَارَة": {
+        "turkish_meaning": "Ustalık, yetenek",
+        "kelime_cinsi": "Maharet"
+    },
+    "مَاهِر": {
+        "turkish_meaning": "Usta, yetenekli",
+        "kelime_cinsi": "Mahir"
+    },
+    "مَحْكُوم": {
+        "turkish_meaning": "Hükümlü, cezaya çarptırılmış",
+        "kelime_cinsi": "Mahkum"
+    },
+    "مَقَالَة": {
+        "turkish_meaning": "Makale",
+        "kelime_cinsi": "Makale"
+    },
+    "مَقَام": {
+        "turkish_meaning": "Yer, durum",
+        "kelime_cinsi": "Makam"
+    },
+    "مَعْقُول": {
+        "turkish_meaning": "Akla uygun",
+        "kelime_cinsi": "Makul"
+    },
+    "مَال": {
+        "turkish_meaning": "Mal, para, sermaye",
+        "kelime_cinsi": "Mal"
+    },
+    "مَالِك": {
+        "turkish_meaning": "Hakim, Sahip",
+        "kelime_cinsi": "Malik"
+    },
+    "مَعْلُوم": {
+        "turkish_meaning": "Bilinen",
+        "kelime_cinsi": "Malum"
+    },
+    "مَعْلُومَات": {
+        "turkish_meaning": "Bilgi",
+        "kelime_cinsi": "Malumat"
+    },
+    "مَعْنَى": {
+        "turkish_meaning": "Anlam",
+        "kelime_cinsi": "Mana"
+    },
+    "مَانِع": {
+        "turkish_meaning": "Engel",
+        "kelime_cinsi": "Mani"
+    },
+    "مَنْظَرَة": {
+        "turkish_meaning": "Manzara",
+        "kelime_cinsi": "Manzara"
+    },
+    "مَصْرَف": {
+        "turkish_meaning": "Harcama, banka",
+        "kelime_cinsi": "Masraf"
+    },
+    "مَطْبَعَة": {
+        "turkish_meaning": "Baskı makinesi",
+        "kelime_cinsi": "Matbaa"
+    },
+    "مَطْبُوع": {
+        "turkish_meaning": "Basılı",
+        "kelime_cinsi": "Matbu"
+    },
+    "مَعْذِرَة": {
+        "turkish_meaning": "Özür",
+        "kelime_cinsi": "Mazeret"
+    },
+    "مَعْذُور": {
+        "turkish_meaning": "Özrü kabul gören, özürlü",
+        "kelime_cinsi": "Mazur"
+    },
+    "مَبْلَغ": {
+        "turkish_meaning": "Miktar, sınır",
+        "kelime_cinsi": "Meblağ"
+    },
+    "مَجْبُور": {
+        "turkish_meaning": "Zorunlu",
+        "kelime_cinsi": "Mecbur"
+    },
+    "مَجْلِس": {
+        "turkish_meaning": "Oturulan yer",
+        "kelime_cinsi": "Meclis"
+    },
+    "مَجْرَى": {
+        "turkish_meaning": "Akıntı, sel, hat, akım",
+        "kelime_cinsi": "Mecra"
+    },
+    "مَجْهُول": {
+        "turkish_meaning": "Bilinmeyen",
+        "kelime_cinsi": "Meçhul"
+    },
+    "مَدَنِي": {
+        "turkish_meaning": "Şehirli",
+        "kelime_cinsi": "Medeni"
+    },
+    "مَدْرَسَة": {
+        "turkish_meaning": "Okul",
+        "kelime_cinsi": "Medrese"
+    },
+    "مَفْرُوشَات": {
+        "turkish_meaning": "Ev eşyası, mobilya",
+        "kelime_cinsi": "Mefruşat"
+    },
+    "مَكَان": {
+        "turkish_meaning": "Yer, konum",
+        "kelime_cinsi": "Mekan"
+    },
+    "مَمْنُون": {
+        "turkish_meaning": "Minnettar, takatsiz",
+        "kelime_cinsi": "Memnun"
+    },
+    "مَأمُور": {
+        "turkish_meaning": "Görevli, emir kulu",
+        "kelime_cinsi": "Memur"
+    },
+    "مَرْحَبَا": {
+        "turkish_meaning": "Merhaba",
+        "kelime_cinsi": "Merhaba"
+    },
+    "مَرْحَلَة": {
+        "turkish_meaning": "Rota, yolculuk",
+        "kelime_cinsi": "Merhale"
+    },
+    "مَرْحَمَة": {
+        "turkish_meaning": "Şefkat, merhamet",
+        "kelime_cinsi": "Merhamet"
+    },
+    "مَرْكَز": {
+        "turkish_meaning": "Sağlam yer, merkez",
+        "kelime_cinsi": "Merkez"
+    },
+    "مَسَافَة": {
+        "turkish_meaning": "Uzaklık",
+        "kelime_cinsi": "Mesafe"
+    },
+    "مَسْجِد": {
+        "turkish_meaning": "Secde edilen yer",
+        "kelime_cinsi": "Mescit"
+    },
+    "مَثَلاً": {
+        "turkish_meaning": "Örneğin",
+        "kelime_cinsi": "Mesela"
+    },
+    "مَسَألَة": {
+        "turkish_meaning": "Soru, sorun, olay",
+        "kelime_cinsi": "Mesele"
+    },
+    "مَسْكَن": {
+        "turkish_meaning": "Kalınan yer, konut",
+        "kelime_cinsi": "Mesken"
+    },
+    "مسْوُول": {
+        "turkish_meaning": "Sorumlu, yetkili",
+        "kelime_cinsi": "Mesul"
+    },
+    "مَشْهُور": {
+        "turkish_meaning": "Meşhur",
+        "kelime_cinsi": "Meşhur"
+    },
+    "مَشْرُوبَات": {
+        "turkish_meaning": "İçecekler",
+        "kelime_cinsi": "Meşrubat"
+    },
+    "مَتَانَة": {
+        "turkish_meaning": "Sağlamlık",
+        "kelime_cinsi": "Metanet"
+    },
+    "مَتْرُوك": {
+        "turkish_meaning": "Terk edilen",
+        "kelime_cinsi": "Metruk"
+    },
+    "مَوْجُود": {
+        "turkish_meaning": "Var olan, bulunan",
+        "kelime_cinsi": "Mevcut"
+    },
+    "مَوْقِع": {
+        "turkish_meaning": "Yer, durum",
+        "kelime_cinsi": "Mevki"
+    },
+    "مَوْسِم": {
+        "turkish_meaning": "Sezon, dönem",
+        "kelime_cinsi": "Mevsim"
+    },
+    "مَوْضُوع": {
+        "turkish_meaning": "Konu, sorun",
+        "kelime_cinsi": "Mevzu"
+    },
+    "مَيْدَان": {
+        "turkish_meaning": "Alan, saha, sektör",
+        "kelime_cinsi": "Meydan"
+    },
+    "مِلَّة": {
+        "turkish_meaning": "Topluluk, cemaat",
+        "kelime_cinsi": "Millet"
+    },
+    "مِعْمَار": {
+        "turkish_meaning": "Mimar",
+        "kelime_cinsi": "Mimar"
+    },
+    "مَنَارَة": {
+        "turkish_meaning": "Minare, fener kulesi",
+        "kelime_cinsi": "Minare"
+    },
+    "مَيرَاث": {
+        "turkish_meaning": "Miras",
+        "kelime_cinsi": "Miras"
+    },
+    "مُسَافِر": {
+        "turkish_meaning": "Misafir",
+        "kelime_cinsi": "Musafir"
+    },
+    "مِثَال": {
+        "turkish_meaning": "Eş, denk, benzer",
+        "kelime_cinsi": "Misal"
+    },
+    "مِسْك": {
+        "turkish_meaning": "Temiz koku",
+        "kelime_cinsi": "Misk"
+    },
+    "مِزَاح": {
+        "turkish_meaning": "Şaka, mizah",
+        "kelime_cinsi": "Mizah"
+    },
+    "مُعَامَلَة": {
+        "turkish_meaning": "Davranış, tavır, işlem",
+        "kelime_cinsi": "Muamele"
+    },
+    "مُغْلَق": {
+        "turkish_meaning": "Kapalı, kilitli, anlaşılmaz",
+        "kelime_cinsi": "Muğlak"
+    },
+    "مُحَبَّة": {
+        "turkish_meaning": "Aşk, sevgi, dostluk",
+        "kelime_cinsi": "Muhabbet"
+    },
+    "مُحَاكَمَة": {
+        "turkish_meaning": "Yargılama",
+        "kelime_cinsi": "Muhakeme"
+    },
+    "مُحَاسَبَة": {
+        "turkish_meaning": "Hesaplama",
+        "kelime_cinsi": "Muhasebe"
+    },
+    "مُحْتَاج": {
+        "turkish_meaning": "Muhtaç, yoksul",
+        "kelime_cinsi": "Muhtaç"
+    },
+    "مُخْتَلِف": {
+        "turkish_meaning": "Farklı, türlü",
+        "kelime_cinsi": "Muhtelif"
+    },
+    "مُحْتَمَل": {
+        "turkish_meaning": "Olası",
+        "kelime_cinsi": "Muhtemel"
+    },
+    "مُحْتَرَم": {
+        "turkish_meaning": "Şerefli, saygın",
+        "kelime_cinsi": "Muhterem"
+    },
+    "مُحْتَشَم": {
+        "turkish_meaning": "Utangaç, çekinen",
+        "kelime_cinsi": "Muhteşem"
+    },
+    "مُقَاوَلَة": {
+        "turkish_meaning": "Diyalog, sözleşme, anlaşma",
+        "kelime_cinsi": "Mukavele"
+    },
+    "مُطْلَق": {
+        "turkish_meaning": "Serbest, salt, sınırsız",
+        "kelime_cinsi": "Mutlak"
+    },
+    "مُوَظَّف": {
+        "turkish_meaning": "Görevli, vazifeli",
+        "kelime_cinsi": "Muvazzaf"
+    },
+    "مَوْز": {
+        "turkish_meaning": "Muz",
+        "kelime_cinsi": "Mevz"
+    },
+    "مُبَالَغَة": {
+        "turkish_meaning": "Abartı",
+        "kelime_cinsi": "Mübalağa"
+    },
+    "مُبَارَك": {
+        "turkish_meaning": "Bereketli, kutlu",
+        "kelime_cinsi": "Mübarek"
+    },
+    "مُجَادَلَة": {
+        "turkish_meaning": "Tartışma, münazara",
+        "kelime_cinsi": "Mücadele"
+    },
+    "مُدَّة": {
+        "turkish_meaning": "Süre, süreç",
+        "kelime_cinsi": "Müddet"
+    },
+    "مُدِير": {
+        "turkish_meaning": "Müdür, yönetici",
+        "kelime_cinsi": "Müdür"
+    },
+    "مُفَتِّش": {
+        "turkish_meaning": "Denetleyici",
+        "kelime_cinsi": "Müfettiş"
+    },
+    "مُهَنْدِس": {
+        "turkish_meaning": "Mühendis, teknisyen",
+        "kelime_cinsi": "Mühendis"
+    },
+    "مؤمن": {
+        "turkish_meaning": "İnanan",
+        "kelime_cinsi": "Mümin"
+    },
+    "مُمْكِن": {
+        "turkish_meaning": "Mümkün",
+        "kelime_cinsi": "Mümkün"
+    },
+    "مُنَاقَشَة": {
+        "turkish_meaning": "Tartışma, itiraz, panel",
+        "kelime_cinsi": "Münakaşa"
+    },
+    "مُنَجِّم": {
+        "turkish_meaning": "Astrolog",
+        "kelime_cinsi": "Müneccim"
+    },
+    "مُرَاجَعَة": {
+        "turkish_meaning": "İnceleme, başvuru",
+        "kelime_cinsi": "Müracaat"
+    },
+    "مُسَابَقَة": {
+        "turkish_meaning": "Yarışma, rekabet",
+        "kelime_cinsi": "Müsabaka"
+    },
+    "مُسْلِم": {
+        "turkish_meaning": "Müslüman",
+        "kelime_cinsi": "Müslim"
+    },
+    "مُسْرِف": {
+        "turkish_meaning": "Tutumsuz, sarf eden",
+        "kelime_cinsi": "Müsrif"
+    },
+    "مُسْتَقْبَل": {
+        "turkish_meaning": "Ön, gelecek",
+        "kelime_cinsi": "Müstekbel"
+    },
+    "مُسْتَشَار": {
+        "turkish_meaning": "Danışman",
+        "kelime_cinsi": "Müsteşar"
+    },
+    "مِسْوَدَّة": {
+        "turkish_meaning": "Karalama, taslak",
+        "kelime_cinsi": "Müsvedde"
+    },
+    "مُشْتَرَك": {
+        "turkish_meaning": "Ortak, abone",
+        "kelime_cinsi": "Müşterek"
+    },
+    "مُتَعَهِّد": {
+        "turkish_meaning": "Söz veren, üstlenen",
+        "kelime_cinsi": "Müteahhit"
+    },
+    "مُتَخَصِّص": {
+        "turkish_meaning": "Uzman",
+        "kelime_cinsi": "Mütehassıs"
+    },
+    "مُتَرْجِم": {
+        "turkish_meaning": "Çevirmen",
+        "kelime_cinsi": "Mütercim"
+    },
+    "مُزَايَدَة": {
+        "turkish_meaning": "Açık artırma",
+        "kelime_cinsi": "Müzayede"
+    },
+    "نَادِر": {
+        "turkish_meaning": "Çok kıymetli, tuhaf",
+        "kelime_cinsi": "Nadir"
+    },
+    "نَغْمَة": {
+        "turkish_meaning": "Ezgi, ton, şarkı",
+        "kelime_cinsi": "Nağme"
+    },
+    "نَقْدًا": {
+        "turkish_meaning": "Peşin olarak",
+        "kelime_cinsi": "Nakden"
+    },
+    "نَقْل": {
+        "turkish_meaning": "Aktarma, taşıma",
+        "kelime_cinsi": "Nakil"
+    },
+    "نَقْد": {
+        "turkish_meaning": "Eleştiri, para, nakit",
+        "kelime_cinsi": "Nakit"
+    },
+    "نقليات": {
+        "turkish_meaning": "Nakliyat",
+        "kelime_cinsi": "Nakliyat"
+    },
+    "نَصِيحَة": {
+        "turkish_meaning": "Öğüt, tavsiye",
+        "kelime_cinsi": "Nasihat"
+    },
+    "نَظَرًا": {
+        "turkish_meaning": "…. E göre",
+        "kelime_cinsi": "Nazaran"
+    },
+    "نَدَامَة": {
+        "turkish_meaning": "Pişmanlık",
+        "kelime_cinsi": "Nedamet"
+    },
+    "نَفِيس": {
+        "turkish_meaning": "Değerli",
+        "kelime_cinsi": "Nefis"
+    },
+    "نَفْس": {
+        "turkish_meaning": "Can, öz, kendi",
+        "kelime_cinsi": "Nefs"
+    },
+    "نَتِبيجَة": {
+        "turkish_meaning": "Sonuç, ürün",
+        "kelime_cinsi": "Netice"
+    },
+    "نَوْع": {
+        "turkish_meaning": "Cins, tür, çeşit",
+        "kelime_cinsi": "Nevi"
+    },
+    "نِكَاح": {
+        "turkish_meaning": "Nikah, evlilik",
+        "kelime_cinsi": "Nikah"
+    },
+    "نِيَّة": {
+        "turkish_meaning": "Amaç, eğilim",
+        "kelime_cinsi": "Niyet"
+    },
+    "نِظَام": {
+        "turkish_meaning": "Düzen, sistem",
+        "kelime_cinsi": "Nizam"
+    },
+    "نُقْصَان": {
+        "turkish_meaning": "Eksik, kusur",
+        "kelime_cinsi": "Noksan"
+    },
+    "نُقْطَة": {
+        "turkish_meaning": "Nokta, benek, parça",
+        "kelime_cinsi": "Nokta"
+    },
+    "نُسْخَة": {
+        "turkish_meaning": "Kopya, örnek",
+        "kelime_cinsi": "Nüsha"
+    },
+    "بَنْطَلُون": {
+        "turkish_meaning": "Pantolon",
+        "kelime_cinsi": "Pantolon"
+    },
+    "بِيجَامَة": {
+        "turkish_meaning": "Pijama",
+        "kelime_cinsi": "Pijama"
+    },
+    "رَب": {
+        "turkish_meaning": "Eğiten, Rab, Sahip",
+        "kelime_cinsi": "Rab"
+    },
+    "رَاديو": {
+        "turkish_meaning": "Radyo",
+        "kelime_cinsi": "Radyo"
+    },
+    "رَغْبَة": {
+        "turkish_meaning": "Talep, eğilim",
+        "kelime_cinsi": "Rağbet"
+    },
+    "رَاحَة": {
+        "turkish_meaning": "Rahat",
+        "kelime_cinsi": "Rahat"
+    },
+    "رَحْمَة": {
+        "turkish_meaning": "Acıma, şefkat",
+        "kelime_cinsi": "Rahmet"
+    },
+    "رَقَم": {
+        "turkish_meaning": "Sayı, rakam, numara",
+        "kelime_cinsi": "Rakam"
+    },
+    "رَسُول": {
+        "turkish_meaning": "Gönderilen, elçi",
+        "kelime_cinsi": "Rasul"
+    },
+    "رَاضِي": {
+        "turkish_meaning": "Memnun",
+        "kelime_cinsi": "Razı"
+    },
+    "رَا ءِج": {
+        "turkish_meaning": "Yaygın, canlı",
+        "kelime_cinsi": "Rayiç"
+    },
+    "رَهْن": {
+        "turkish_meaning": "Rehin, güvence, ipotek",
+        "kelime_cinsi": "Rehin"
+    },
+    "رَسْم": {
+        "turkish_meaning": "Resim, şekil, iz",
+        "kelime_cinsi": "Resim"
+    },
+    "رَسْمِي": {
+        "turkish_meaning": "Devlete ait, resmi",
+        "kelime_cinsi": "Resmi"
+    },
+    "رَسَّام": {
+        "turkish_meaning": "Ressam",
+        "kelime_cinsi": "Ressam"
+    },
+    "رِضا ء": {
+        "turkish_meaning": "Memnuniyet",
+        "kelime_cinsi": "Rıza"
+    },
+    "رجا ء": {
+        "turkish_meaning": "Beklenti, ümit",
+        "kelime_cinsi": "Rica"
+    },
+    "ريا ء": {
+        "turkish_meaning": "Sahtecilik",
+        "kelime_cinsi": "Riya"
+    },
+    "روح": {
+        "turkish_meaning": "Ruh, can",
+        "kelime_cinsi": "Ruh"
+    },
+    "رُخْصَة": {
+        "turkish_meaning": "İzin, yetki, lisans",
+        "kelime_cinsi": "Ruhsat"
+    },
+    "رُطُوبَة": {
+        "turkish_meaning": "Nem, ıslaklık",
+        "kelime_cinsi": "Rutubet"
+    },
+    "رُشْوَة": {
+        "turkish_meaning": "Rüşvet",
+        "kelime_cinsi": "Rüşvet"
+    },
+    "رُتْبَة": {
+        "turkish_meaning": "Seviye, sınıf",
+        "kelime_cinsi": "Rütbe"
+    },
+    "سَاعَة": {
+        "turkish_meaning": "Saat, süre",
+        "kelime_cinsi": "Saat"
+    },
+    "صَبَاح": {
+        "turkish_meaning": "Sabah",
+        "kelime_cinsi": "Sabah"
+    },
+    "سَابِقَة": {
+        "turkish_meaning": "Önce gelen, öncelik",
+        "kelime_cinsi": "Sabıka"
+    },
+    "صَبْر": {
+        "turkish_meaning": "Tahammül, sabır",
+        "kelime_cinsi": "Sabır"
+    },
+    "ثَابِت": {
+        "turkish_meaning": "Sağlam, sıkı, oturmuş",
+        "kelime_cinsi": "Sabit"
+    },
+    "صَابُون": {
+        "turkish_meaning": "Sabun",
+        "kelime_cinsi": "Sabun"
+    },
+    "صَدَاقَة": {
+        "turkish_meaning": "Arkadaşlık, dostluk",
+        "kelime_cinsi": "Sadakat"
+    },
+    "صَادِق": {
+        "turkish_meaning": "Doğru, gerçek, içten",
+        "kelime_cinsi": "Sadık"
+    },
+    "سَاحَة": {
+        "turkish_meaning": "Meydan, alan",
+        "kelime_cinsi": "Saha"
+    },
+    "سَاحِل": {
+        "turkish_meaning": "Sahil, plaj",
+        "kelime_cinsi": "Sahil"
+    },
+    "صَاحِب": {
+        "turkish_meaning": "Arkadaş, dost, taraftar",
+        "kelime_cinsi": "Sahip"
+    },
+    "سَاكِن": {
+        "turkish_meaning": "Oturan, ikamet eden",
+        "kelime_cinsi": "Sakin"
+    },
+    "سَالِم": {
+        "turkish_meaning": "Güvende, emniyette",
+        "kelime_cinsi": "Salim"
+    },
+    "صَنْعَة": {
+        "turkish_meaning": "Üretim, imal, meslek",
+        "kelime_cinsi": "Sanat"
+    },
+    "ثَانِيَة": {
+        "turkish_meaning": "Saniye, ikinci",
+        "kelime_cinsi": "Saniye"
+    },
+    "صَرَّاف": {
+        "turkish_meaning": "Sarraf",
+        "kelime_cinsi": "Sarraf"
+    },
+    "سَطْر": {
+        "turkish_meaning": "Satır, sıra",
+        "kelime_cinsi": "Satır"
+    },
+    "ثَبَات": {
+        "turkish_meaning": "Kararlılık, sağlamlık",
+        "kelime_cinsi": "Sebat"
+    },
+    "سَبَب": {
+        "turkish_meaning": "Neden, gerekçe",
+        "kelime_cinsi": "Sebep"
+    },
+    "سَجَّادَة": {
+        "turkish_meaning": "Seccade",
+        "kelime_cinsi": "Seccade"
+    },
+    "سَجْدَة": {
+        "turkish_meaning": "Secde",
+        "kelime_cinsi": "Secde"
+    },
+    "سَفَالَة": {
+        "turkish_meaning": "Aşağı olma, düşkünlük",
+        "kelime_cinsi": "Sefalet"
+    },
+    "سَفَر": {
+        "turkish_meaning": "Sefer",
+        "kelime_cinsi": "Sefer"
+    },
+    "سَفِيه": {
+        "turkish_meaning": "Çirkef, arsız",
+        "kelime_cinsi": "Sefih"
+    },
+    "سَفِير": {
+        "turkish_meaning": "Aracı, elçi",
+        "kelime_cinsi": "Sefir"
+    },
+    "سَلاَم": {
+        "turkish_meaning": "Barış, güven",
+        "kelime_cinsi": "Selam"
+    },
+    "سَمَا ء": {
+        "turkish_meaning": "Gök, gökyüzü",
+        "kelime_cinsi": "Sema"
+    },
+    "ثَمَرَة": {
+        "turkish_meaning": "Randıman, sermaye",
+        "kelime_cinsi": "Semere"
+    },
+    "سَنَد": {
+        "turkish_meaning": "Destek, dayanak, arkalık",
+        "kelime_cinsi": "Senet"
+    },
+    "سَرَاب": {
+        "turkish_meaning": "Hayal, aldanış",
+        "kelime_cinsi": "Serap"
+    },
+    "ثَرْوَة": {
+        "turkish_meaning": "Zenginlik, servet",
+        "kelime_cinsi": "Servet"
+    },
+    "سِيَاحَة": {
+        "turkish_meaning": "Yolculuk, turizm, gezi",
+        "kelime_cinsi": "Seyahat"
+    },
+    "صِفَة": {
+        "turkish_meaning": "Nitelik, özellik",
+        "kelime_cinsi": "Sıfat"
+    },
+    "صِحَّة": {
+        "turkish_meaning": "Doğruluk, gerçeklik",
+        "kelime_cinsi": "Sıhhat"
+    },
+    "صِنْف": {
+        "turkish_meaning": "Sınıf, cins, çeşit",
+        "kelime_cinsi": "Sınıf"
+    },
+    "سِر": {
+        "turkish_meaning": "Sır, öz, gizem",
+        "kelime_cinsi": "Sır"
+    },
+    "سِجِلّ": {
+        "turkish_meaning": "Sicil, kayıt, liste",
+        "kelime_cinsi": "Sicil"
+    },
+    "سِحْر": {
+        "turkish_meaning": "Sihir, büyü",
+        "kelime_cinsi": "Sihir"
+    },
+    "سَلَاح": {
+        "turkish_meaning": "Silah, askeri kuvvetler",
+        "kelime_cinsi": "Silag"
+    },
+    "سِلْسِلَة": {
+        "turkish_meaning": "Zincir, dizi, seri",
+        "kelime_cinsi": "Silsile"
+    },
+    "سِيَاسَة": {
+        "turkish_meaning": "Yönetim, politika",
+        "kelime_cinsi": "Siyaset"
+    },
+    "صُحْبَة": {
+        "turkish_meaning": "Arkadaşlık, dostluk",
+        "kelime_cinsi": "Sohbet"
+    },
+    "صُلْح": {
+        "turkish_meaning": "Anlaşma, uzlaşı",
+        "kelime_cinsi": "Sulh"
+    },
+    "سُلْطَان": {
+        "turkish_meaning": "Güç, hükümet, otorite",
+        "kelime_cinsi": "Sultan"
+    },
+    "سُور": {
+        "turkish_meaning": "Duvar, çit",
+        "kelime_cinsi": "Sur"
+    },
+    "سُكُوت": {
+        "turkish_meaning": "Sessizlik, suskunluk",
+        "kelime_cinsi": "Sükut"
+    },
+    "سُنَّة": {
+        "turkish_meaning": "Adet, gelenek, töre",
+        "kelime_cinsi": "Sünnet"
+    },
+    "سُرْعَة": {
+        "turkish_meaning": "Hız, çabukluk",
+        "kelime_cinsi": "Sürat"
+    },
+    "شَاهِد": {
+        "turkish_meaning": "Şahit, tanık",
+        "kelime_cinsi": "Şahit"
+    },
+    "شَاعِر": {
+        "turkish_meaning": "Şair",
+        "kelime_cinsi": "Şair"
+    },
+    "شَرَاب": {
+        "turkish_meaning": "İçecek, meyve suyu",
+        "kelime_cinsi": "Şarap"
+    },
+    "شَرْق": {
+        "turkish_meaning": "Doğu",
+        "kelime_cinsi": "Şark"
+    },
+    "شَرْط": {
+        "turkish_meaning": "Yarık, şerit, koşul",
+        "kelime_cinsi": "Şart"
+    },
+    "شَهَادَة": {
+        "turkish_meaning": "Tanıklık, sertifika, diploma",
+        "kelime_cinsi": "Şehadet"
+    },
+    "شَكْل": {
+        "turkish_meaning": "Şekil, cins, eşit",
+        "kelime_cinsi": "Şekil"
+    },
+    "شَمْسِيَّة": {
+        "turkish_meaning": "Güneşlik, perde",
+        "kelime_cinsi": "Şemsiye"
+    },
+    "شَرَف": {
+        "turkish_meaning": "Şeref, onur",
+        "kelime_cinsi": "Şeref"
+    },
+    "شَوْق": {
+        "turkish_meaning": "Özleyiş",
+        "kelime_cinsi": "Şevk"
+    },
+    "شَيْطَان": {
+        "turkish_meaning": "Şeytan",
+        "kelime_cinsi": "Şeytan"
+    },
+    "شِدَّة": {
+        "turkish_meaning": "Güç, zorluk",
+        "kelime_cinsi": "Şiddet"
+    },
+    "شِفَا ء": {
+        "turkish_meaning": "İyileşme, ilaç",
+        "kelime_cinsi": "Şifa"
+    },
+    "شَرِكَة": {
+        "turkish_meaning": "Şirket",
+        "kelime_cinsi": "Şerike"
+    },
+    "شُرُوب": {
+        "turkish_meaning": "İçecek",
+        "kelime_cinsi": "Şurup"
+    },
+    "شُبْهَة": {
+        "turkish_meaning": "Benzerlik, şüphe, zan",
+        "kelime_cinsi": "Şüphe"
+    },
+    "تَعَهُّد": {
+        "turkish_meaning": "Söz, vaat",
+        "kelime_cinsi": "Taahhüt"
+    },
+    "تَعَرُّض": {
+        "turkish_meaning": "Karşı hareket, karşı koyma",
+        "kelime_cinsi": "Taarruz"
+    },
+    "تَعَصُّب": {
+        "turkish_meaning": "Tutuculuk, bağnazlık",
+        "kelime_cinsi": "Taassup"
+    },
+    "تَابِع": {
+        "turkish_meaning": "İzleyen, bağımlı, ikincil",
+        "kelime_cinsi": "Tabi"
+    },
+    "طَبِيعَة": {
+        "turkish_meaning": "Doğa, yapı, mizaç",
+        "kelime_cinsi": "Tabiat"
+    },
+    "طَبِيعِي": {
+        "turkish_meaning": "Doğal, normal",
+        "kelime_cinsi": "Tabii"
+    },
+    "طَبِيب": {
+        "turkish_meaning": "Doktor, hekim",
+        "kelime_cinsi": "Tabip"
+    },
+    "طَابُوت": {
+        "turkish_meaning": "Tabut",
+        "kelime_cinsi": "Tabut"
+    },
+    "تَاج": {
+        "turkish_meaning": "Taç",
+        "kelime_cinsi": "Taç"
+    },
+    "تَحْلِيل": {
+        "turkish_meaning": "Çözümleme, analiz",
+        "kelime_cinsi": "Tahlil"
+    },
+    "تَقْدِيم": {
+        "turkish_meaning": "Tanıtma, sunum",
+        "kelime_cinsi": "Takdim"
+    },
+    "تَقْدِير": {
+        "turkish_meaning": "Tahmin yürütme, zannetme",
+        "kelime_cinsi": "Takdir"
+    },
+    "تَعْقِيب": {
+        "turkish_meaning": "Kovuşturma, eleştiri",
+        "kelime_cinsi": "Takip"
+    },
+    "تَقِيَّة": {
+        "turkish_meaning": "Sakınma",
+        "kelime_cinsi": "Takiyye"
+    },
+    "تَقْلِيد": {
+        "turkish_meaning": "Öykünme, imitasyon",
+        "kelime_cinsi": "Taklit"
+    },
+    "تَقْسِيم": {
+        "turkish_meaning": "Bölme, ayırma",
+        "kelime_cinsi": "Taksim"
+    },
+    "تَقْوِيم": {
+        "turkish_meaning": "Paha biçme, kronoloji",
+        "kelime_cinsi": "Takvim"
+    },
+    "تَنْظِيم": {
+        "turkish_meaning": "Düzenleme, ayarlama",
+        "kelime_cinsi": "Tanzim"
+    },
+    "طَابُو": {
+        "turkish_meaning": "Tapu",
+        "kelime_cinsi": "Tapu"
+    },
+    "تَصْوِير": {
+        "turkish_meaning": "Resim yapma, fotoğraf çekme",
+        "kelime_cinsi": "Tasvir"
+    },
+    "تَعْيِين": {
+        "turkish_meaning": "Belirleme, atama",
+        "kelime_cinsi": "Tayin"
+    },
+    "تَعْزِيَة": {
+        "turkish_meaning": "Teselli, baş sağlığı",
+        "kelime_cinsi": "Taziye"
+    },
+    "تَبَسُّم": {
+        "turkish_meaning": "Gülümseme, gülücük",
+        "kelime_cinsi": "Tebessüm"
+    },
+    "طَبَاشِير": {
+        "turkish_meaning": "Tebeşir",
+        "kelime_cinsi": "Tebeşir"
+    },
+    "تَبْلِيغ": {
+        "turkish_meaning": "Duyuru, bildiri",
+        "kelime_cinsi": "Tebliğ"
+    },
+    "تَدَاوِي": {
+        "turkish_meaning": "Tedavi görmek",
+        "kelime_cinsi": "Tedavi"
+    },
+    "تَدْبِير": {
+        "turkish_meaning": "Önlem, düzenleme",
+        "kelime_cinsi": "Tedbir"
+    },
+    "تَكَامُل": {
+        "turkish_meaning": "Olgunlaşma, entegrasyon",
+        "kelime_cinsi": "Tekamül"
+    },
+    "تَكْبِير": {
+        "turkish_meaning": "Büyükleme",
+        "kelime_cinsi": "Tekbir"
+    },
+    "تَكْلِيف": {
+        "turkish_meaning": "Masraf, harcama",
+        "kelime_cinsi": "Teklif"
+    },
+    "تَلَافِي": {
+        "turkish_meaning": "Düzeltmek, çözümlemek",
+        "kelime_cinsi": "Telafi"
+    },
+    "تَلَفُون": {
+        "turkish_meaning": "Telefon",
+        "kelime_cinsi": "Telefon"
+    },
+    "تِلْفِزْيُون": {
+        "turkish_meaning": "Televizyon",
+        "kelime_cinsi": "Televizyon"
+    },
+    "تَرْبِيَة": {
+        "turkish_meaning": "Eğitim, yetiştirme",
+        "kelime_cinsi": "Terbiye"
+    },
+    "تَرَدُّد": {
+        "turkish_meaning": "Çekinme, duraksama",
+        "kelime_cinsi": "Tereddüt"
+    },
+    "تَرْك": {
+        "turkish_meaning": "Terk",
+        "kelime_cinsi": "Terk"
+    },
+    "تَصَادُف": {
+        "turkish_meaning": "Rast gelmek",
+        "kelime_cinsi": "Tesadüf"
+    },
+    "تَسَتُّر": {
+        "turkish_meaning": "Gizlenme, kamuflaj",
+        "kelime_cinsi": "Tesettür"
+    },
+    "تَسْلِيم": {
+        "turkish_meaning": "Teslim",
+        "kelime_cinsi": "Teslim"
+    },
+    "تَثْبِيت": {
+        "turkish_meaning": "Sabit tutma",
+        "kelime_cinsi": "Tespit"
+    },
+    "تَشَكُّر": {
+        "turkish_meaning": "Teşekkür",
+        "kelime_cinsi": "Teşekkür"
+    },
+    "تَشْهِير": {
+        "turkish_meaning": "Tanıtma, ilan etme",
+        "kelime_cinsi": "Teşhir"
+    },
+    "تَشْوِيق": {
+        "turkish_meaning": "Gayrete getirme",
+        "kelime_cinsi": "Teşvik"
+    },
+    "طِلْسِم": {
+        "turkish_meaning": "Sihirli sözler",
+        "kelime_cinsi": "Tılsım"
+    },
+    "تِجَارَة": {
+        "turkish_meaning": "Ticaret, alışveriş",
+        "kelime_cinsi": "Ticaret"
+    },
+    "طُوفَان": {
+        "turkish_meaning": "Sel, su baskını",
+        "kelime_cinsi": "Tufan"
+    },
+    "تُجَّار": {
+        "turkish_meaning": "Tüccar",
+        "kelime_cinsi": "Tüccar"
+    },
+    "يَاقُوت": {
+        "turkish_meaning": "Yakut",
+        "kelime_cinsi": "Yakut"
+    },
+    "يَعْنِي": {
+        "turkish_meaning": "Yani",
+        "kelime_cinsi": "Yani"
+    },
+    "يأس": {
+        "turkish_meaning": "Umutsuzluk",
+        "kelime_cinsi": "Yeis"
+    },
+    "يَمِين": {
+        "turkish_meaning": "Sağ el, yemin",
+        "kelime_cinsi": "Yemin"
+    },
+    "يَتِيم": {
+        "turkish_meaning": "Yetim, biricik",
+        "kelime_cinsi": "Yetim"
+    },
+    "ظَفَر": {
+        "turkish_meaning": "Zafer",
+        "kelime_cinsi": "Zafer"
+    },
+    "ظَاهِر": {
+        "turkish_meaning": "Açık, görünen",
+        "kelime_cinsi": "Zahir"
+    },
+    "ظَالِم": {
+        "turkish_meaning": "Karartan, haksız, günahkar",
+        "kelime_cinsi": "Zalim"
+    },
+    "زَمَان": {
+        "turkish_meaning": "Zaman",
+        "kelime_cinsi": "Zaman"
+    },
+    "ظَن": {
+        "turkish_meaning": "Şüphe, kanaat, varsayım",
+        "kelime_cinsi": "Zan"
+    },
+    "ظَرْف": {
+        "turkish_meaning": "Kap, zarf, koşul, şart",
+        "kelime_cinsi": "Zarf"
+    },
+    "ظَرِيف": {
+        "turkish_meaning": "Alımlı, ince, minyon",
+        "kelime_cinsi": "Zarif"
+    },
+    "ضَرُورِي": {
+        "turkish_meaning": "Zorunlu, mecburi",
+        "kelime_cinsi": "Zaruri"
+    },
+    "ضَعِيف": {
+        "turkish_meaning": "Zayıf, dayanıksız",
+        "kelime_cinsi": "Zayıf"
+    },
+    "ذَكَا ء": {
+        "turkish_meaning": "Zeka",
+        "kelime_cinsi": "Zeka"
+    },
+    "زَكَاة": {
+        "turkish_meaning": "Arılık, temize çıkarma",
+        "kelime_cinsi": "Zekat"
+    },
+    "ذَكِي": {
+        "turkish_meaning": "Zeki",
+        "kelime_cinsi": "Zeki"
+    },
+    "ذَرَّة": {
+        "turkish_meaning": "Atom, parçacık, zerre",
+        "kelime_cinsi": "Zerre"
+    },
+    "ذَوْق": {
+        "turkish_meaning": "Tat, lezzet, zevk",
+        "kelime_cinsi": "Zevk"
+    },
+    "زَيْتُون": {
+        "turkish_meaning": "Zeytin",
+        "kelime_cinsi": "Zeytin"
+    },
+    "ذِهْن": {
+        "turkish_meaning": "Zihin",
+        "kelime_cinsi": "Zihin"
+    },
+    "ذِكْر": {
+        "turkish_meaning": "Hatırlama, anma",
+        "kelime_cinsi": "Zikir"
+    },
+    "زِرَاعَة": {
+        "turkish_meaning": "Tarım",
+        "kelime_cinsi": "Ziraat"
+    },
+    "زِيَادَة": {
+        "turkish_meaning": "Artma, artış",
+        "kelime_cinsi": "Ziyade"
+    },
+    "ضِيَافَة": {
+        "turkish_meaning": "Ağırlama, misafir etme, ikram",
+        "kelime_cinsi": "Ziyafet"
+    },
+    "ظُلم": {
+        "turkish_meaning": "Karanlık, baskı, haksızlık",
+        "kelime_cinsi": "Zulüm"
+    },
+    "زجاجية": {
+        "turkish_meaning": "Cam ile ilgili",
+        "kelime_cinsi": "Züccaciye"
+    },
+    "زُمْرُد": {
+        "turkish_meaning": "Zümrüt",
+        "kelime_cinsi": "Zümrüt"
+    },
+    "زُرَافَة": {
+        "turkish_meaning": "Zürafa",
+        "kelime_cinsi": "Zürafa"
+    }
+}
