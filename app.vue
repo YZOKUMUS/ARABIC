@@ -23,6 +23,7 @@
     </v-app-bar>
 
     <v-container class="main-content mt-15">
+    
       <NuxtPage />
     </v-container>
   </v-app>
