@@ -1,0 +1,1 @@
+import{J as s,_ as t,v as a,x as r,t as n}from"./CF27GNeI.js";const l=s("/bablar.JPG"),c={};function o(i,e){return n(),a("div",null,e[0]||(e[0]=[r("img",{src:l,alt:"Yüklenen Resim",class:"image-fit",width:"105%"},null,-1)]))}const m=t(c,[["render",o]]);export{m as default};
