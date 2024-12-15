@@ -1,10 +1,10 @@
 <template>
   <v-app>
-    <v-navigation-drawer app v-model="drawer" permanent>
+    <v-navigation-drawer app v-model="drawer" close-on-click>
       <v-list>
         <v-list-item
-          v-for="(item, index) in navItems"
-          :key="index"
+          v-for="item in navItems"
+          :key="item.id"
           :to="item.to"
           @click="navigateTo(item)"
         >
@@ -33,23 +33,29 @@ export default {
   data() {
     return {
       drawer: false,
-      currentTitle: 'بِسْمِ اللهِ الرَّحْمٰنِ الرَّحِيمِ',
       navItems: [
-        { title: 'EMSİLE-İ MUHTELİFE', to: '/ziya' },
-        { title: 'S.MÜCERRED FİİLLER', to: '/' },
-        { title: 'S.MEZİD FİİLLER', to: '/about' },
-        { title: '731 KELİME', to: '/contact' },
-        { title: 'ARAPÇA-TÜRKÇE ORTAK KELİMELER', to: '/ortakkelimeler' },
-        { title: 'ESMAUL HUSNA', to: '/sayfa' },
-        { title: 'ARAPÇA EN TEMEL 990 KELİME', to: '/kelime990' },
-        { title: 'AKSAM-I SEBA', to: '/aksamiseba' },
-        { title: 'BAB ŞEMASI', to: '/bablar' },
-        { title: 'ARAPÇA BABLAR', to: '/arapcabablar' },
-        { title: 'KURAN TAMAMI', to: '/kuran' },
-        { title: 'HARFİ CERLER', to: '/harficerler' },
-        { title: 'GÜNLÜK ARAPÇA KELİMELER', to: '/gunlukarapcakelimeler' },
+        { id: 1, title: 'EMSİLE-İ MUHTELİFE', to: '/ziya' },
+        { id: 2, title: 'S.MÜCERRED FİİLLER', to: '/' },
+        { id: 3, title: 'S.MEZİD FİİLLER', to: '/about' },
+        { id: 4, title: '731 KELİME', to: '/contact' },
+        { id: 5, title: 'ARAPÇA-TÜRKÇE ORTAK KELİMELER', to: '/ortakkelimeler' },
+        { id: 6, title: 'ESMAUL HUSNA', to: '/sayfa' },
+        { id: 7, title: 'ARAPÇA EN TEMEL 990 KELİME', to: '/kelime990' },
+        { id: 8, title: 'AKSAM-I SEBA', to: '/aksamiseba' },
+        { id: 9, title: 'BAB ŞEMASI', to: '/bablar' },
+        { id: 10, title: 'ARAPÇA BABLAR', to: '/arapcabablar' },
+        { id: 11, title: 'KURAN TAMAMI', to: '/kuran' },
+        { id: 12, title: 'HARFİ CERLER', to: '/harficerler' },
+        { id: 13, title: 'GÜNLÜK ARAPÇA KELİMELER', to: '/gunlukarapcakelimeler' },
       ],
     };
+  },
+  computed: {
+    currentTitle() {
+      const currentRoute = this.$route.path;
+      const activeItem = this.navItems.find(item => item.to === currentRoute);
+      return activeItem ? activeItem.title : 'بِسْمِ اللهِ الرَّحْمٰنِ الرَّحِيمِ';
+    },
   },
   methods: {
     toggleDrawer() {
@@ -57,8 +63,6 @@ export default {
     },
     navigateTo(item) {
       this.$router.push(item.to);
-      this.drawer = false;
-      this.currentTitle = item.title;
     },
   },
 };
@@ -70,13 +74,12 @@ export default {
 }
 .app-title {
   flex: 1;
-  color: blue;
+  color: var(--main-title-color, blue); /* Varsayılan tema rengi */
   font-size: 26px;
   line-height: 1.9;
 }
 
-/* Yan menünün açılma ve kapanma hızını artırmak için geçiş süresi ayarı */
 .v-navigation-drawer {
-  transition-duration: 0.2s !important; /* Varsayılan süreyi azaltıyoruz */
+  transition-duration: 0.2s !important;
 }
 </style>

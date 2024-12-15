@@ -45,7 +45,7 @@
 </template>
 
 <script>
-import * as XLSX from 'xlsx';
+import * as XLSX from "xlsx";
 
 export default {
   props: {
@@ -62,7 +62,7 @@ export default {
     return {
       wordCards: [],
       isLoading: true,
-      isReading: false,  // Okuma durumunu kontrol etmek için
+      isReading: false, // Okuma durumunu kontrol etmek için
     };
   },
   watch: {
@@ -80,7 +80,7 @@ export default {
   methods: {
     loadExcel(uintArr) {
       try {
-        const workbook = XLSX.read(uintArr, { type: 'array' });
+        const workbook = XLSX.read(uintArr, { type: "array" });
         const firstSheetName = workbook.SheetNames[0];
         const worksheet = XLSX.utils.sheet_to_json(
           workbook.Sheets[firstSheetName],
@@ -88,28 +88,33 @@ export default {
         );
 
         const headers = worksheet[0];
-        const arabicIndex = headers.indexOf('arabic_word');
-        const turkishIndex = headers.indexOf('turkish_meaning');
-        const kelimeCinsiIndex = headers.indexOf('kelime_cinsi'); // Kelime cinsi sütunu
+        const arabicIndex = headers.indexOf("arabic_word");
+        const turkishIndex = headers.indexOf("turkish_meaning");
+        const kelimeCinsiIndex = headers.indexOf("kelime_cinsi");
 
         if (arabicIndex === -1 || turkishIndex === -1) {
-          throw new Error('Gerekli sütunlar bulunamadı.');
+          throw new Error("Gerekli sütunlar bulunamadı.");
         }
 
-        this.wordCards = worksheet.slice(1).map((row) => {
-          return row ? {
-            arabic: row[arabicIndex] || '',
-            turkish: row[turkishIndex] || '',
-            kelime_cinsi: row[kelimeCinsiIndex] || '', // Kelime cinsini ekle
-            flipped: false,
-          } : null;
-        }).filter(Boolean); // Boş satırları filtrele
+        this.wordCards = worksheet
+          .slice(1)
+          .map((row) => {
+            return row
+              ? {
+                  arabic: row[arabicIndex] || "",
+                  turkish: row[turkishIndex] || "",
+                  kelime_cinsi: row[kelimeCinsiIndex] || "",
+                  flipped: false,
+                }
+              : null;
+          })
+          .filter(Boolean);
 
         if (this.shuffle) {
           this.wordCards = this.shuffleArray(this.wordCards);
         }
       } catch (error) {
-        console.error('Excel yüklenirken hata oluştu:', error);
+        console.error("Excel yüklenirken hata oluştu:", error);
         this.resetCards();
       } finally {
         this.isLoading = false;
@@ -124,7 +129,7 @@ export default {
         if (this.wordCards[index].flipped) {
           this.readWord(this.wordCards[index]);
         }
-        
+
         // Kart tekrar 2 saniye sonra kapanacak
         setTimeout(() => {
           this.wordCards[index].flipped = false;
@@ -136,18 +141,16 @@ export default {
       this.isReading = true; // Okuma başlatıldığında 'isReading' durumu true olacak
 
       const utterance = new SpeechSynthesisUtterance(card.arabic);
-      utterance.lang = 'ar-SA';
+      utterance.lang = "ar-SA";
 
-      // Tarayıcıda konuşma sentezi desteği var mı kontrol et
-      if ('speechSynthesis' in window) {
+      if ("speechSynthesis" in window) {
         speechSynthesis.speak(utterance);
 
-        // Okuma tamamlandıktan sonra 'isReading' durumunu false yap
         utterance.onend = () => {
           this.isReading = false;
         };
       } else {
-        console.warn('Tarayıcınız konuşma sentezlemesini desteklemiyor.');
+        console.warn("Tarayıcınız konuşma sentezlemesini desteklemiyor.");
         this.isReading = false;
       }
     },
@@ -165,28 +168,26 @@ export default {
       this.isLoading = false;
     },
 
-    // Kart rengi sınıfını döndüren fonksiyon
     getCardClass(word) {
-      // Başlangıç kelimeleri ve özel harfler için genişletilmiş koşullar
       if (
-        word.startsWith('الْ') ||  // Elif Lam
-        word.startsWith('اَلْ') ||  // Alif Lam
-        word.startsWith('مِنْ') ||  // Min
-        word.startsWith('ال') ||     // El
-        word.startsWith('بِ') ||     // Bi
-        word.includes('ٌ') ||       // Kasra, ً, ٍ gibi harfler
-        word.includes('ً') ||
-        word.includes('ٍ') ||
-        word.includes('ة') ||      // Çeşitli Arapça harfler
-        word.includes('َ') ||      // Fethayı da ekleyebiliriz
-        word.includes('ُ')
+        word.startsWith("الْ") ||
+        word.startsWith("اَلْ") ||
+        word.startsWith("مِنْ") ||
+        word.startsWith("ال") ||
+        word.startsWith("بِ") ||
+        word.includes("ٌ") ||
+        word.includes("ً") ||
+        word.includes("ٍ") ||
+        word.includes("ة") ||
+        word.includes("َ") ||
+        word.includes("ُ")
       ) {
-        return 'gray-card';  // Açık yeşil renk sınıfı
-      } else if (word.startsWith('لَنْ')) {
-        return 'blue-card';  // Mavi renk
+        return "gray-card";
+      } else if (word.startsWith("لَنْ")) {
+        return "blue-card";
       }
 
-      return '';  // Hiçbir renk uygulanmazsa
+      return "";
     },
   },
 };
@@ -209,7 +210,7 @@ export default {
   perspective: 1000px;
   width: 100%;
   height: 120px;
-  cursor: pointer; /* Tıklandığında el şeklinde cursor */
+  cursor: pointer;
 }
 
 .flip-card-inner {
@@ -240,7 +241,7 @@ export default {
 
 .flip-card-front,
 .gray-card {
-  background-color: #90ee90; /* Açık yeşil */
+  background-color: #90ee90;
 }
 
 .blue-card {
@@ -270,6 +271,6 @@ export default {
 }
 
 .kelime-cinsi-arabic {
-  font-size: 6px; /* 6 punto */
+  font-size: 6px;
 }
 </style>
