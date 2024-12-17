@@ -17,17 +17,32 @@
               md="auto"
               class="card-col"
             >
-              <div @click="toggleCard(index)" class="flip-card">
+              <div
+                @click="toggleCard(index)"
+                @keydown.enter="toggleCard(index)"
+                tabindex="0"
+                class="flip-card"
+                role="button"
+                :aria-label="`Kart: ${card.arabic}`"
+              >
                 <div :class="['flip-card-inner', { flipped: card.flipped }]">
                   <div
                     :class="['flip-card-front', getCardClass(card.arabic)]"
+                    :aria-hidden="card.flipped"
                   >
                     <p class="arabic">{{ card.arabic }}</p>
-                    <p v-if="card.kelime_cinsi" class="kelime-cinsi-arabic">{{ card.kelime_cinsi }}</p>
+                    <p v-if="card.kelime_cinsi" class="kelime-cinsi-arabic">
+                      {{ card.kelime_cinsi }}
+                    </p>
                   </div>
-                  <div class="flip-card-back">
+                  <div
+                    class="flip-card-back"
+                    :aria-hidden="!card.flipped"
+                  >
                     <p class="turkish">{{ card.turkish }}</p>
-                    <p v-if="card.kelime_cinsi" class="kelime-cinsi">{{ card.kelime_cinsi }}</p>
+                    <p v-if="card.kelime_cinsi" class="kelime-cinsi">
+                      {{ card.kelime_cinsi }}
+                    </p>
                   </div>
                 </div>
               </div>
@@ -57,12 +72,16 @@ export default {
       type: Boolean,
       default: true,
     },
+    flipTimeout: {
+      type: Number,
+      default: 1000,
+    },
   },
   data() {
     return {
       wordCards: [],
       isLoading: true,
-      isReading: false, // Okuma durumunu kontrol etmek için
+      isReading: false,
     };
   },
   watch: {
@@ -125,20 +144,18 @@ export default {
       if (index < this.wordCards.length && !this.isReading) {
         this.wordCards[index].flipped = !this.wordCards[index].flipped;
 
-        // Okuma işlemini sadece kart açıldığında başlat
         if (this.wordCards[index].flipped) {
           this.readWord(this.wordCards[index]);
         }
 
-        // Kart tekrar 2 saniye sonra kapanacak
         setTimeout(() => {
           this.wordCards[index].flipped = false;
-        }, 1000);
+        }, this.flipTimeout);
       }
     },
 
     readWord(card) {
-      this.isReading = true; // Okuma başlatıldığında 'isReading' durumu true olacak
+      this.isReading = true;
 
       const utterance = new SpeechSynthesisUtterance(card.arabic);
       utterance.lang = "ar-SA";
@@ -272,5 +289,14 @@ export default {
 
 .kelime-cinsi-arabic {
   font-size: 6px;
+}
+
+@media (max-width: 768px) {
+  .flip-card {
+    height: 100px;
+  }
+  .arabic {
+    font-size: 24px;
+  }
 }
 </style>

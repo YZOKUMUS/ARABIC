@@ -1,13 +1,21 @@
 <template>
   <div>
     <!-- Sidebar'ı açıp kapatmak için düğme -->
-    <button class="toggle-btn" @click="toggleSidebar">
+    <button 
+      class="toggle-btn" 
+      @click="toggleSidebar" 
+      aria-label="Toggle sidebar" 
+      :aria-expanded="isActive"
+    >
       ☰
-      <!-- Menü simgesi -->
     </button>
 
     <!-- Sidebar Bileşeni -->
-    <div :class="['sidebar', { 'is-active': isActive }]">
+    <div 
+      :class="['sidebar', { 'is-active': isActive }]" 
+      role="navigation" 
+      aria-label="Main Sidebar"
+    >
       <nav>
         <ul>
           <li><nuxt-link to="/" class="menu-item">Home</nuxt-link></li>
@@ -26,9 +34,27 @@ export default {
       isActive: false, // Sidebar başlangıçta kapalı
     };
   },
+  mounted() {
+    document.addEventListener("keydown", this.handleKeydown);
+  },
+  beforeDestroy() {
+    document.removeEventListener("keydown", this.handleKeydown);
+  },
   methods: {
-    toggleSidebar() {
-      this.isActive = !this.isActive;
+    toggleSidebar(forceState) {
+      this.isActive = forceState !== undefined ? forceState : !this.isActive;
+
+      if (this.isActive) {
+        this.$nextTick(() => {
+          const firstLink = this.$el.querySelector(".menu-item");
+          if (firstLink) firstLink.focus();
+        });
+      }
+    },
+    handleKeydown(event) {
+      if (event.key === "Escape" && this.isActive) {
+        this.toggleSidebar(false);
+      }
     },
   },
 };
@@ -46,9 +72,9 @@ export default {
   color: white;
   padding: 16px;
   transform: translateX(-100%);
-  transition: transform 0.2s ease; /* Geçiş süresi kısaltıldı */
+  transition: transform 0.2s ease;
   overflow-x: hidden;
-  z-index: 5;
+  z-index: 99;
 }
 
 .sidebar.is-active {
@@ -62,7 +88,7 @@ export default {
 }
 
 .sidebar ul li {
-  margin: 16px 0;
+  margin: 20px 0;
 }
 
 .menu-item {
@@ -71,11 +97,12 @@ export default {
   font-size: 18px;
   padding: 8px;
   display: block;
-  transition: background-color 0.2s ease;
+  transition: background-color 0.2s ease, color 0.2s ease;
 }
 
 .menu-item:hover {
-  background-color: #555555a9;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #dcdcdc;
 }
 
 /* Toggle buton stilleri */
@@ -88,11 +115,21 @@ export default {
   border: none;
   padding: 8px 16px;
   cursor: pointer;
-  z-index: 10;
+  z-index: 100;
   transition: background-color 0.2s ease;
 }
 
 .toggle-btn:hover {
-  background-color: #55555565;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Responsive Tasarım */
+@media (max-width: 768px) {
+  .sidebar {
+    width: 200px;
+  }
+  .menu-item {
+    font-size: 16px;
+  }
 }
 </style>
